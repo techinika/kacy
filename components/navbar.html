@@ -1,29 +1,156 @@
-<nav class="bg-white shadow-md sticky top-0 z-50">
+<nav
+  class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-[100] border-b border-gray-100"
+>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between h-20 items-center">
-      <div class="flex-shrink-0 flex items-center">
-        <span class="text-2xl font-bold text-green-700 tracking-tight"
-          >KACY<span class="text-yellow-600 tracking-widest text-sm block"
-            >GROUP</span
-          ></span
+      <a href="index.html" class="flex flex-col group">
+        <span
+          class="text-2xl font-black text-slate-900 leading-none tracking-tighter transition group-hover:text-[#d72229]"
         >
-      </div>
-      <div class="hidden md:flex space-x-8 font-medium items-center">
-        <a href="/" class="text-green-700">Home</a>
-        <a href="/poultry" class="hover:text-green-600 transition"
-          >Poultry Farm</a
+          KACY<span class="text-[#d72229]">.</span>
+        </span>
+        <span
+          class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400 group-hover:text-slate-600 transition"
         >
-        <a href="/real-estate" class="hover:text-green-600 transition"
+          LTD GROUP
+        </span>
+      </a>
+
+      <div
+        class="hidden md:flex space-x-8 font-semibold items-center text-sm uppercase tracking-wide"
+      >
+        <a
+          href="/"
+          class="text-slate-900 hover:text-[#d72229] transition-colors"
+          >Home</a
+        >
+        <a
+          href="/poultry"
+          class="text-slate-600 hover:text-[#d72229] transition-colors"
+          >Poultry</a
+        >
+        <a
+          href="/real-estate"
+          class="text-slate-600 hover:text-[#d72229] transition-colors"
           >Real Estate</a
         >
-        <a href="/hotel" class="hover:text-green-600 transition">Hotel</a>
-        <a href="/about" class="hover:text-green-600 transition">About Us</a>
+        <a
+          href="/hotel"
+          class="text-slate-600 hover:text-[#d72229] transition-colors"
+          >Hotel</a
+        >
+        <a
+          href="/about"
+          class="text-slate-600 hover:text-[#d72229] transition-colors"
+          >About</a
+        >
         <a
           href="/contact"
-          class="bg-green-700 text-white px-5 py-2 rounded-full hover:bg-green-800 transition"
-          >Contact Us</a
+          class="bg-[#d72229] text-white px-6 py-2.5 rounded-full hover:bg-red-700 hover:shadow-lg hover:shadow-red-200 transition-all duration-300"
+        >
+          Contact Us
+        </a>
+      </div>
+
+      <div class="md:hidden flex items-center">
+        <button
+          id="mobile-menu-button"
+          class="text-slate-900 focus:outline-none p-2"
+        >
+          <svg
+            id="menu-icon"
+            class="w-7 h-7"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+          <svg
+            id="close-icon"
+            class="w-7 h-7 hidden"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl"
+  >
+    <div class="px-4 pt-4 pb-8 space-y-2 font-bold">
+      <a
+        href="index.html"
+        class="block px-4 py-3 text-slate-900 hover:bg-gray-50 rounded-lg"
+        >Home</a
+      >
+      <a
+        href="poultry-farm.html"
+        class="block px-4 py-3 text-slate-600 hover:bg-gray-50 rounded-lg"
+        >Poultry Farm</a
+      >
+      <a
+        href="real-estate.html"
+        class="block px-4 py-3 text-slate-600 hover:bg-gray-50 rounded-lg"
+        >Real Estate</a
+      >
+      <a
+        href="motel.html"
+        class="block px-4 py-3 text-slate-600 hover:bg-gray-50 rounded-lg"
+        >Motel</a
+      >
+      <a
+        href="about.html"
+        class="block px-4 py-3 text-slate-600 hover:bg-gray-50 rounded-lg"
+        >About Us</a
+      >
+      <div class="pt-4 px-4">
+        <a
+          href="contact.html"
+          class="block text-center bg-[#d72229] text-white py-4 rounded-xl shadow-md"
+          >Get in Touch</a
         >
       </div>
     </div>
   </div>
 </nav>
+
+<script>
+  // Mobile Menu Toggle Logic
+  const btn = document.getElementById("mobile-menu-button");
+  const menu = document.getElementById("mobile-menu");
+  const menuIcon = document.getElementById("menu-icon");
+  const closeIcon = document.getElementById("close-icon");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+    menuIcon.classList.toggle("hidden");
+    closeIcon.classList.toggle("hidden");
+  });
+
+  // Close menu when clicking a link
+  const links = menu.querySelectorAll("a");
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.classList.add("hidden");
+      menuIcon.classList.remove("hidden");
+      closeIcon.classList.add("hidden");
+    });
+  });
+</script>
