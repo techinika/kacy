@@ -1,0 +1,12 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+.brand-red {
+  color: #d72229;
+}
+.bg-brand-red {
+  background-color: #d72229;
+}
+.border-brand-red {
+  border-color: #d72229;
+}
