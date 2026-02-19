@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Commercial Spaces | Kacy Real Estate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/main.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .property-card:hover .property-overlay {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <div id="navbar-placeholder"></div>
+
+    <header class="bg-white border-b py-16">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">
+          Prime Commercial Spaces
+        </h1>
+        <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+          Strategic business locations in Gasabo District, designed to help your
+          enterprise thrive in a growing economy.
+        </p>
+      </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 -mt-8">
+      <div
+        class="bg-white shadow-xl rounded-xl p-6 grid grid-cols-1 md:grid-cols-3 gap-4 items-end"
+      >
+        <div>
+          <label class="block text-xs font-bold uppercase text-gray-400 mb-2"
+            >Location</label
+          >
+          <select class="w-full border-gray-200 rounded-lg p-3 bg-gray-50">
+            <option>All Locations (Gasabo)</option>
+            <option>Rusororo</option>
+            <option>Kabuga II</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-bold uppercase text-gray-400 mb-2"
+            >Space Type</label
+          >
+          <select class="w-full border-gray-200 rounded-lg p-3 bg-gray-50">
+            <option>Retail / Shop</option>
+            <option>Office Space</option>
+            <option>Warehouse</option>
+          </select>
+        </div>
+        <button
+          class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 rounded-lg transition"
+        >
+          Search Availability
+        </button>
+      </div>
+    </div>
+
+    <section class="py-20 max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 property-card transition transform hover:-translate-y-2"
+        >
+          <div class="relative h-64">
+            <img
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800"
+              class="w-full h-full object-cover"
+            />
+            <span
+              class="absolute top-4 left-4 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase"
+              >Available</span
+            >
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-slate-800 mb-2">
+              Modern Retail Hub
+            </h3>
+            <p class="text-gray-500 text-sm mb-4">
+              Located in high-traffic commercial zones, perfect for shops and
+              retail outlets.
+            </p>
+            <div
+              class="flex items-center gap-4 text-sm text-slate-600 font-medium border-t pt-4"
+            >
+              <span class="flex items-center">📏 45 sqm - 120 sqm</span>
+              <span class="flex items-center">🅿️ Parking Available</span>
+            </div>
+            <a
+              href="https://wa.me/250700000000?text=I%20am%20interested%20in%20renting%20a%20Retail%20Space%20at%20Kacy%20Real%20Estate"
+              class="mt-6 block text-center bg-slate-800 text-white py-3 rounded-lg font-bold hover:bg-slate-900 transition"
+            >
+              Inquire Now
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 property-card transition transform hover:-translate-y-2"
+        >
+          <div class="relative h-64">
+            <img
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800"
+              class="w-full h-full object-cover"
+            />
+            <span
+              class="absolute top-4 left-4 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase"
+              >Available</span
+            >
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-slate-800 mb-2">
+              Professional Office Suites
+            </h3>
+            <p class="text-gray-500 text-sm mb-4">
+              Quiet, secure, and professional environments for consultancies and
+              corporate offices.
+            </p>
+            <div
+              class="flex items-center gap-4 text-sm text-slate-600 font-medium border-t pt-4"
+            >
+              <span class="flex items-center">🏢 Level 1 & 2</span>
+              <span class="flex items-center">⚡ Backup Power</span>
+            </div>
+            <a
+              href="https://wa.me/250700000000?text=I%20am%20interested%20in%20Office%20Space%20at%20Kacy%20Real%20Estate"
+              class="mt-6 block text-center bg-slate-800 text-white py-3 rounded-lg font-bold hover:bg-slate-900 transition"
+            >
+              View Details
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 property-card transition transform hover:-translate-y-2"
+        >
+          <div class="relative h-64">
+            <img
+              src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"
+              class="w-full h-full object-cover"
+            />
+            <span
+              class="absolute top-4 left-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase"
+              >Limited</span
+            >
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-slate-800 mb-2">
+              Industrial Store Units
+            </h3>
+            <p class="text-gray-500 text-sm mb-4">
+              Dry and secure storage spaces located near the farm area, ideal
+              for equipment and stock.
+            </p>
+            <div
+              class="flex items-center gap-4 text-sm text-slate-600 font-medium border-t pt-4"
+            >
+              <span class="flex items-center">📦 Large Volume</span>
+              <span class="flex items-center">🛡️ 24/7 Guards</span>
+            </div>
+            <a
+              href="https://wa.me/250700000000?text=I%20am%20interested%20in%20Storage/Warehouse%20space%20at%20Kacy%20Real%20Estate"
+              class="mt-6 block text-center bg-slate-800 text-white py-3 rounded-lg font-bold hover:bg-slate-900 transition"
+            >
+              Contact Agent
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-900 py-20 text-white">
+      <div
+        class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center"
+      >
+        <div>
+          <h2 class="text-3xl font-bold mb-8">Management & Maintenance</h2>
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="bg-blue-600 p-3 rounded-lg h-fit">🏙️</div>
+              <div>
+                <h4 class="font-bold">Prime Accessibility</h4>
+                <p class="text-slate-400 text-sm">
+                  All our buildings are located along accessible roads in
+                  Rusororo and Kabuga.
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="bg-blue-600 p-3 rounded-lg h-fit">🛠️</div>
+              <div>
+                <h4 class="font-bold">Proactive Maintenance</h4>
+                <p class="text-slate-400 text-sm">
+                  We handle all repairs and facility management so you can focus
+                  on your business.
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="bg-blue-600 p-3 rounded-lg h-fit">📶</div>
+              <div>
+                <h4 class="font-bold">Business Ready</h4>
+                <p class="text-slate-400 text-sm">
+                  Pre-installed connections for water, electricity, and
+                  high-speed internet.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-slate-800 p-10 rounded-2xl border border-slate-700">
+          <h3 class="text-2xl font-bold mb-4 text-blue-400">
+            Ready to expand?
+          </h3>
+          <p class="mb-6 text-slate-300">
+            Contact our real estate manager today for a site visit or to discuss
+            custom partitioning for your business needs.
+          </p>
+          <a
+            href="tel:+250700000000"
+            class="inline-block bg-white text-slate-900 px-8 py-3 rounded-lg font-bold"
+            >Call: +250 7XX XXX XXX</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+  </body>
+</html>
