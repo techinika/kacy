@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // 1. Load the Navbar
   fetch("../components/navbar.html")
     .then((response) => {
       if (!response.ok) throw new Error("Navbar not found");
@@ -42,3 +41,9 @@ function initMobileMenu() {
     });
   });
 }
+
+createIcons({
+  icons: {
+    mail,
+  },
+});
