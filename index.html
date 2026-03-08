@@ -4,15 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kacy Farms | Industrial Poultry & Premium Meat Supply</title>
-
-    <style>
-      .text-brand {
-        color: #d72229;
-      }
-      .bg-brand {
-        background-color: #d72229;
-      }
-    </style>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/5f3cf1873e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/main.js" type="module"></script>
   </head>
   <body class="bg-white text-slate-900">
     <div id="navbar-placeholder"></div>
@@ -34,13 +32,13 @@
       <div class="max-w-7xl mx-auto px-4 relative z-10">
         <div class="max-w-2xl">
           <span
-            class="inline-block px-4 py-1 rounded-full bg-brand text-white text-xs font-bold uppercase tracking-widest mb-6"
+            class="inline-block px-4 py-1 rounded-full bg-brand-red text-white text-xs font-bold uppercase tracking-widest mb-6"
             >Industrial Scale Production</span
           >
           <h1
             class="text-6xl lg:text-8xl font-black text-white mb-6 leading-none tracking-tighter"
           >
-            Premium <br /><span class="text-brand">Poultry.</span>
+            Premium <br /><span class="text-brand-red">Poultry.</span>
             <br />Unmatched Scale.
           </h1>
           <p class="text-xl text-slate-300 mb-10 leading-relaxed">
@@ -50,7 +48,7 @@
           <div class="flex gap-4">
             <a
               href="#products"
-              class="bg-brand text-white px-10 py-5 rounded-2xl font-black hover:bg-red-700 transition-all shadow-xl shadow-red-900/40"
+              class="bg-brand-red text-white px-10 py-5 rounded-2xl font-black hover:bg-red-700 transition-all shadow-xl shadow-red-900/40"
               >View Products</a
             >
             <a
@@ -70,7 +68,7 @@
             <h2 class="text-4xl font-black uppercase tracking-tighter">
               Products & Services
             </h2>
-            <div class="h-1.5 w-20 bg-brand mt-4"></div>
+            <div class="h-1.5 w-20 bg-brand-red mt-4"></div>
           </div>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -118,7 +116,7 @@
               class="relative overflow-hidden rounded-[2rem] mb-6 aspect-square bg-slate-900 flex items-center justify-center p-10 text-center"
             >
               <div class="text-white">
-                <h4 class="text-3xl font-black text-brand mb-4">
+                <h4 class="text-3xl font-black text-brand-red mb-4">
                   Wholesale Supply
                 </h4>
                 <p class="text-slate-400 text-sm leading-relaxed">
@@ -147,7 +145,7 @@
             class="rounded-[3rem] shadow-2xl grayscale hover:grayscale-0 transition duration-700"
           />
           <div
-            class="absolute -bottom-10 -right-10 bg-brand text-white p-12 rounded-3xl shadow-2xl hidden lg:block"
+            class="absolute -bottom-10 -right-10 bg-brand-red text-white p-12 rounded-3xl shadow-2xl hidden lg:block"
           >
             <p class="text-5xl font-black mb-1">97%</p>
             <p
@@ -159,7 +157,7 @@
         </div>
         <div>
           <h2 class="text-5xl font-black leading-tight mb-8">
-            Engineered for <br /><span class="text-brand"
+            Engineered for <br /><span class="text-brand-red"
               >Quality & Trust.</span
             >
           </h2>
@@ -219,7 +217,7 @@
             >
           </div>
           <div
-            class="p-10 border border-slate-100 rounded-[2rem] flex flex-col items-center group hover:border-brand transition-all"
+            class="p-10 border border-slate-100 rounded-[2rem] flex flex-col items-center group hover:border-brand-red transition-all"
           >
             <span class="text-4xl mb-4 group-hover:scale-110 transition"
               ><i class="fa-solid fa-basket-shopping"></i
@@ -230,7 +228,7 @@
             >
           </div>
           <div
-            class="p-10 border border-slate-100 rounded-[2rem] flex flex-col items-center group hover:border-brand transition-all"
+            class="p-10 border border-slate-100 rounded-[2rem] flex flex-col items-center group hover:border-brand-red transition-all"
           >
             <span class="text-4xl mb-4 group-hover:scale-110 transition"
               ><i class="fa-solid fa-utensils"></i
@@ -241,7 +239,7 @@
             >
           </div>
           <div
-            class="p-10 border border-slate-100 rounded-[2rem] flex flex-col items-center group hover:border-brand transition-all"
+            class="p-10 border border-slate-100 rounded-[2rem] flex flex-col items-center group hover:border-brand-red transition-all"
           >
             <span class="text-4xl mb-4 group-hover:scale-110 transition"
               ><i class="fa-solid fa-building"></i
@@ -296,7 +294,9 @@
     <section id="logistics" class="py-24 bg-white">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-16">
-          <h2 class="text-4xl font-black uppercase tracking-tighter text-brand">
+          <h2
+            class="text-4xl font-black uppercase tracking-tighter text-brand-red"
+          >
             Farm to Plate Journey
           </h2>
           <p class="text-slate-500 mt-2 font-semibold">
@@ -329,11 +329,11 @@
           </div>
           <div class="text-center relative z-10">
             <div
-              class="w-20 h-20 bg-brand text-white rounded-full flex items-center justify-center mx-auto mb-6 font-black text-2xl shadow-xl shadow-red-200"
+              class="w-20 h-20 bg-brand-red text-white rounded-full flex items-center justify-center mx-auto mb-6 font-black text-2xl shadow-xl shadow-red-200"
             >
               3
             </div>
-            <h4 class="font-bold mb-2 text-brand">Cold Distribution</h4>
+            <h4 class="font-bold mb-2 text-brand-red">Cold Distribution</h4>
             <p class="text-xs text-slate-500">
               Dispatched in specialized refrigerated trucks.
             </p>
@@ -356,7 +356,7 @@
         >
           <div class="max-w-md">
             <h4 class="text-3xl font-black mb-4 leading-tight">
-              Ready to scale your <br /><span class="text-brand"
+              Ready to scale your <br /><span class="text-brand-red"
                 >Supply Chain?</span
               >
             </h4>
@@ -367,7 +367,7 @@
           </div>
           <a
             href="/contact"
-            class="bg-slate-900 text-white px-12 py-5 rounded-2xl font-black text-lg hover:bg-brand transition-all"
+            class="bg-slate-900 text-white px-12 py-5 rounded-2xl font-black text-lg hover:bg-brand-red transition-all"
             >Connect with Sales</a
           >
         </div>
