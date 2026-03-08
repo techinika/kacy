@@ -14,122 +14,200 @@
   </head>
   <body class="bg-white text-slate-900">
     <div id="navbar-placeholder"></div>
-
     <section
-      class="relative h-[90vh] flex items-center overflow-hidden bg-slate-900"
+      class="relative md:h-[90vh] lg:h-[90vh] py-10 flex items-center overflow-hidden bg-slate-900"
     >
       <div class="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1587593810167-a84920ea0781?auto=format&fit=crop&q=80&w=1600"
-          class="w-full h-full object-cover opacity-60"
-          alt="Premium Poultry Meat"
+          class="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition duration-[2s]"
+          alt="Kacy Farms Premium Meat"
         />
         <div
-          class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/40 to-transparent"
+          class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/60 to-transparent"
         ></div>
       </div>
 
-      <div class="max-w-7xl mx-auto px-4 relative z-10">
-        <div class="max-w-2xl">
-          <span
-            class="inline-block px-4 py-1 rounded-full bg-brand-red text-white text-xs font-bold uppercase tracking-widest mb-6"
-            >Industrial Scale Production</span
+      <div class="max-w-7xl mx-auto px-4 relative z-10 w-full">
+        <div class="max-w-3xl">
+          <div
+            class="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 mb-8"
           >
+            <i class="fa-solid fa-shield-check text-brand-red"></i>
+            <span
+              class="text-white text-[10px] font-black uppercase tracking-[0.3em]"
+            >
+              Rwanda's Industrial Protein Partner
+            </span>
+          </div>
+
           <h1
-            class="text-6xl lg:text-8xl font-black text-white mb-6 leading-none tracking-tighter"
+            class="text-6xl lg:text-[100px] font-black text-white mb-6 leading-[0.85] tracking-tighter"
           >
-            Premium <br /><span class="text-brand-red">Poultry.</span>
-            <br />Unmatched Scale.
+            KACY <span class="text-brand-red">FARMS</span> <br /><span
+              class="text-4xl lg:text-6xl text-slate-200"
+              >Scale You Can Trust</span
+            >
           </h1>
-          <p class="text-xl text-slate-300 mb-10 leading-relaxed">
-            Kacy Farms provides Kigali's hospitality and retail sectors with
-            high-volume, 150-ton annual yields of fresh, processed broiler meat.
+
+          <p
+            class="text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl border-l-4 border-brand-red pl-6"
+          >
+            Stop worrying about supply-chain gaps. We deliver
+            <span class="text-white font-bold">150 tons</span> of fresh,
+            industrial-grade poultry annually, backed by a
+            <span class="text-white font-bold">100% cold-chain guarantee</span>
+            for Kigali’s elite hospitality sector.
           </p>
-          <div class="flex gap-4">
+
+          <div class="flex flex-wrap gap-6 items-center">
             <a
               href="#products"
-              class="bg-brand-red text-white px-10 py-5 rounded-2xl font-black hover:bg-red-700 transition-all shadow-xl shadow-red-900/40"
-              >View Products</a
+              class="bg-brand-red text-white px-12 py-6 rounded-[2rem] font-black hover:bg-red-700 transition-all shadow-2xl shadow-red-900/50 flex items-center gap-3 uppercase text-sm tracking-widest"
             >
-            <a
-              href="#logistics"
-              class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-2xl font-black hover:bg-white/20 transition-all"
-              >Our Process</a
+              Secure Bulk Supply <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+
+            <div
+              class="flex gap-8 px-8 py-4 rounded-[2rem] bg-white/5 border border-white/10 backdrop-blur-sm"
             >
+              <div class="text-center">
+                <p class="text-white font-black text-xl">12x</p>
+                <p
+                  class="text-[9px] uppercase font-bold text-slate-500 tracking-tighter"
+                >
+                  Batches Yearly
+                </p>
+              </div>
+              <div class="h-8 w-[1px] bg-white/10"></div>
+              <div class="text-center">
+                <p class="text-white font-black text-xl">24h</p>
+                <p
+                  class="text-[9px] uppercase font-bold text-slate-500 tracking-tighter"
+                >
+                  Farm-to-Door
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="products" class="py-24 bg-white">
+    <section id="products" class="py-24 bg-slate-200">
       <div class="max-w-7xl mx-auto px-4">
-        <div class="flex justify-between items-end mb-16">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4"
+        >
           <div>
-            <h2 class="text-4xl font-black uppercase tracking-tighter">
-              Products & Services
+            <span
+              class="text-brand-red font-bold tracking-widest text-xs uppercase"
+              >Our Catalog</span
+            >
+            <h2
+              class="text-4xl lg:text-5xl font-black uppercase tracking-tighter mt-2"
+            >
+              Broiler Meat <span class="text-slate-400">&</span> Value Chain
             </h2>
             <div class="h-1.5 w-20 bg-brand-red mt-4"></div>
           </div>
+          <p class="text-slate-500 max-w-md text-sm leading-relaxed">
+            From industrial-scale production to precision processing, we manage
+            every step of the poultry value chain to ensure clinical quality.
+          </p>
         </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div class="group">
             <div
-              class="relative overflow-hidden rounded-[2rem] mb-6 aspect-square bg-slate-100"
+              class="relative overflow-hidden rounded-[2rem] mb-6 aspect-[4/5] bg-slate-100 shadow-sm border border-slate-100"
             >
               <img
                 src="https://www.jbfoodsyorkshire.com/product-images/26341-1.jpg"
                 class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                alt="Whole Broiler Chicken"
               />
               <div
-                class="absolute top-4 right-4 bg-white px-4 py-2 rounded-xl font-bold text-sm shadow-lg"
+                class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-4 rounded-2xl"
               >
-                Whole Broilers
+                <p class="text-[10px] font-black uppercase text-brand-red mb-1">
+                  Standard Supply
+                </p>
+                <h4 class="font-bold text-slate-900">Whole Broilers</h4>
               </div>
             </div>
-            <h3 class="text-2xl font-bold mb-2">Grade-A Whole Birds</h3>
-            <p class="text-slate-500 text-sm">
-              Standard weights (1.2kg - 1.8kg) processed daily for freshness.
+            <p class="text-slate-500 text-xs leading-relaxed">
+              Premium Grade-A birds (1.2kg – 1.8kg). Cleaned, chilled, and ready
+              for retail or industrial kitchens.
             </p>
           </div>
+
           <div class="group">
             <div
-              class="relative overflow-hidden rounded-[2rem] mb-6 aspect-square bg-slate-100"
+              class="relative overflow-hidden rounded-[2rem] mb-6 aspect-[4/5] bg-slate-100 shadow-sm border border-slate-100"
             >
               <img
                 src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&q=80&w=600"
                 class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                alt="Chicken Special Cuts"
               />
               <div
-                class="absolute top-4 right-4 bg-white px-4 py-2 rounded-xl font-bold text-sm shadow-lg"
+                class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-4 rounded-2xl"
               >
-                Prime Cuts
+                <p class="text-[10px] font-black uppercase text-brand-red mb-1">
+                  Precision Processing
+                </p>
+                <h4 class="font-bold text-slate-900">Specialized Cuts</h4>
               </div>
             </div>
-            <h3 class="text-2xl font-bold mb-2">Specialized Portions</h3>
-            <p class="text-slate-500 text-sm">
-              Thighs, Wings, Drumsticks, and Breast Fillets prepared to chef
-              specifications.
+            <p class="text-slate-500 text-xs leading-relaxed">
+              Customized portioning: Drumsticks, Wings, Thighs, and Fillets
+              vacuum-packed for freshness.
             </p>
           </div>
+
           <div class="group">
             <div
-              class="relative overflow-hidden rounded-[2rem] mb-6 aspect-square bg-slate-900 flex items-center justify-center p-10 text-center"
+              class="relative overflow-hidden rounded-[2rem] mb-6 aspect-[4/5] bg-slate-950 flex flex-col justify-end p-8 border border-slate-900"
             >
-              <div class="text-white">
-                <h4 class="text-3xl font-black text-brand-red mb-4">
-                  Wholesale Supply
-                </h4>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                  Dedicated procurement support for high-volume recurring
-                  contracts.
-                </p>
+              <div class="mb-auto">
+                <i class="fa-solid fa-gears text-brand-red text-3xl"></i>
               </div>
+              <h4 class="text-2xl font-bold text-white mb-2">
+                Processing Services
+              </h4>
+              <p class="text-slate-400 text-xs leading-relaxed">
+                We offer automated slaughtering and value-chain processing for
+                large-scale broiler producers.
+              </p>
+              <div class="mt-4 h-[1px] w-full bg-white/10"></div>
+              <span
+                class="text-[10px] text-gray-100 font-bold uppercase mt-4 block"
+                >B2B Service</span
+              >
             </div>
-            <h3 class="text-2xl font-bold mb-2">Bulk Contracts</h3>
-            <p class="text-slate-500 text-sm">
-              Fixed pricing and guaranteed priority for our long-term
-              hospitality partners.
-            </p>
+          </div>
+
+          <div class="group">
+            <div
+              class="relative overflow-hidden rounded-[2rem] mb-6 aspect-[4/5] bg-brand-red p-8 flex flex-col justify-end"
+            >
+              <div class="mb-auto">
+                <i class="fa-solid fa-truck-box text-white text-3xl"></i>
+              </div>
+              <h4 class="text-2xl font-bold text-white mb-2">
+                Wholesale Supply
+              </h4>
+              <p class="text-white/80 text-xs leading-relaxed">
+                Bulk logistics and recurring contracts for supermarkets, hotels,
+                and export distributors.
+              </p>
+              <div class="mt-4 h-[1px] w-full bg-white/20"></div>
+              <span
+                class="text-[10px] text-white font-bold uppercase mt-4 block"
+                >150T Annual Capacity</span
+              >
+            </div>
           </div>
         </div>
       </div>
