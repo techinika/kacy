@@ -1,8 +1,4 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
 
 Sitemap: https://kacy.rw/sitemap.xml
-
-User-agent: *
-Disallow:

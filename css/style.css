@@ -3,6 +3,7 @@
 * {
   font-family: "Google Sans", sans-serif;
 }
+
 .brand-red {
   color: #d72229;
 }
@@ -11,4 +12,64 @@
 }
 .border-brand-red {
   border-color: #d72229;
+}
+
+/* Responsive text wrapping and overflow handling */
+p, span, div, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-word;
+  word-break: break-word;
+}
+
+/* Prevent horizontal scroll on mobile */
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Responsive heading sizes */
+h1 {
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+}
+
+/* Responsive paragraph text */
+p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+/* Logo responsive sizing */
+.logo-img {
+  height: clamp(2.5rem, 8vw, 4rem);
+  width: auto;
+  max-width: 100%;
+}
+
+/* Ensure buttons and links wrap properly on mobile */
+a, button {
+  white-space: normal;
+  min-width: 0;
+}
+
+/* Responsive container padding */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
