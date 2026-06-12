@@ -1,102 +1,122 @@
-# KOKOLIKOOO - Rwanda's Premier Poultry Brand
+# KOKOLIKOOO — Fresh Chicken Delivered to Kigali
 
-KOKOLIKOOO is Rwanda's leading poultry brand operated by Kacy Farms. Based in Gasabo District, Kigali, we specialize in high-volume poultry production with a 100% cold-chain guarantee for the hospitality and retail sectors.
+KOKOLIKOOO is Kacy Farms' poultry brand, serving hotels, supermarkets, and restaurants across Kigali, Rwanda. We deliver fresh, chilled chicken — 150 tons per year, always on time.
 
 ## Brand
 
 - **Brand Name**: KOKOLIKOOO
-- **Company**: Kacy Farms
+- **Company**: Kacy Farms (Kacy Ltd)
 - **Website**: https://kacy.rw
-
-## Business Operations
-
-- **Industrial Poultry Production**: 150 tons annual capacity
-- **Product Catalog**: Whole broilers, specialized cuts (drumsticks, wings, thighs, fillets), B2B processing services
-- **Cold-Chain Distribution**: Farm-to-door delivery across Kigali
-
-## Project Structure
-
-```
-KACY/
-├── index.html              # Home page
-├── about/
-│   └── index.html          # About page
-├── contact/
-│   └── index.html          # Contact page
-├── components/
-│   ├── navbar.html         # Reusable navigation
-│   └── footer.html         # Reusable footer
-├── css/
-│   └── style.css           # Custom styles
-├── js/
-│   └── main.js             # JavaScript modules
-├── assets/
-│   └── images/             # Images and logos
-├── sitemap.xml             # XML sitemap
-└── robots.txt              # Search engine config
-```
 
 ## Pages
 
 | Page | URL | Description |
 |------|-----|-------------|
-| Home | `/` | Landing page with products and services |
-| About | `/about/` | Company profile, vision, mission |
-| Contact | `/contact/` | Contact form, phone numbers, location |
+| Home | `/` | Products, testimonials, FAQ |
+| About | `/about/` | Company story, team, values |
+| Contact | `/contact/` | Contact form, phone, location |
+| Privacy Policy | `/privacy-policy/` | Data handling policy |
+| 404 | `/404.html` | Custom error page |
 
-## SEO Optimization
+## Project Structure
 
-The website includes:
-
-- **Meta Tags**: Optimized title, description, and keywords for each page
-- **Structured Data**: Schema.org markup (Organization, LocalBusiness, FAQPage)
-- **Open Graph**: Social media preview tags
-- **Sitemap**: XML sitemap with priority and change frequency
-- **Robots.txt**: Search engine crawling configuration
-- **Canonical URLs**: Prevents duplicate content issues
-- **Hreflang**: Language targeting (en, rw)
-
-## Technologies
-
-- **HTML5**: Semantic markup
-- **Tailwind CSS**: CDN for styling (v3.x)
-- **Vanilla JavaScript**: ES6 modules
-- **Font Awesome**: Icons (CDN)
-
-## Contact Numbers
-
-- **Phone 1**: +250 788 309 077
-- **Phone 2**: +250 788 867 296
-- **Email**: info@kacy.rw
-- **Address**: Cyanamo, Kabuga II, Rusororo, Gasabo District, Kigali, Rwanda
+```
+KACY/
+├── index.html                    # Home page
+├── 404.html                      # Error page
+├── about/
+│   └── index.html                # About page
+├── contact/
+│   └── index.html                # Contact page
+├── privacy-policy/
+│   └── index.html                # Privacy policy
+├── components/
+│   ├── navbar.html               # Reusable navigation
+│   └── footer.html               # Reusable footer
+├── css/
+│   ├── style.css                 # Custom styles
+│   ├── tailwind.css              # Built Tailwind CSS (generated)
+│   └── input.css                 # Tailwind entry point
+├── js/
+│   └── main.js                   # Component loader + mobile menu
+├── assets/
+│   └── images/                   # Brand images and logos
+├── tailwind.config.js            # Tailwind configuration
+├── package.json                  # Build scripts
+├── sitemap.xml                   # XML sitemap with image tags
+└── robots.txt                    # Search engine config
+```
 
 ## Development
 
-### Running Locally
+### Prerequisites
 
-Simply open `index.html` in your browser, or use a local server:
+- Node.js 18+
+
+### Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Build CSS
+npm run build:css
+
+# Watch for changes (automatic rebuild)
+npm run watch:css
+```
+
+Open `index.html` in your browser, or serve locally:
 
 ```bash
 # Using Python
 python -m http.server 8000
 
-# Using Node.js (npx)
+# Using Node.js
 npx serve
 ```
 
 ### Building for Production
 
-1. Update meta tags and content as needed
-2. Ensure all images are optimized
-3. Test responsive design across devices
-4. Submit sitemap to Google Search Console
+```bash
+npm run build
+```
 
-### Updating Content
+This generates a minified `css/tailwind.css` from the HTML content sources. Always rebuild before deploying.
+
+## SEO
+
+- **Structured Data**: Organization, LocalBusiness, Product, FAQPage, BreadcrumbList
+- **Open Graph + Twitter Cards**: Social preview tags on every page
+- **Sitemap**: XML with image tags, submitted via robots.txt
+- **Hreflang**: English and Kinyarwanda language tags
+- **Canonical URLs**: Prevents duplicate content issues
+
+## Copy Style
+
+All website copy is written in plain, conversational language. No jargon, no corporate speak. The tone is direct and human — like talking to a real person who can help.
+
+## Technologies
+
+- **HTML5**: Semantic markup
+- **Tailwind CSS v3**: Pre-built via CLI (not CDN)
+- **Vanilla JavaScript**: ES6 modules
+- **Font Awesome**: Icons (CDN)
+- **Google Fonts**: Google Sans
+
+## Updating Content
 
 - **Logo**: Replace `assets/images/kokolikooo.jpeg`
 - **Navbar/Footer**: Edit `components/navbar.html` or `components/footer.html`
 - **Styles**: Edit `css/style.css`
 - **Contact Info**: Update in all HTML files and components
+- **After any HTML change**: Run `npm run build:css`
+
+## Contact
+
+- **Phone**: +250 788 309 077 | +250 788 867 296
+- **Email**: info@kacy.rw
+- **Address**: Cyanamo, Kabuga II, Rusororo, Gasabo District, Kigali, Rwanda
 
 ## License
 

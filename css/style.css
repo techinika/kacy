@@ -8,8 +8,8 @@
   src: url(https://fonts.gstatic.com/s/googlesans/v58/4Ua_rENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RFD48TE63OOYKtrwEIJllpyw.ttf) format("truetype");
 }
 
-* {
-  font-family: "Google Sans", sans-serif;
+html {
+  font-family: "Google Sans", system-ui, -apple-system, sans-serif;
 }
 
 .brand-red {

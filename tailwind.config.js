@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['"Google Sans"', "system-ui", "-apple-system", "sans-serif"],
+      },
       colors: {
         brand: {
           DEFAULT: "#d72229",
