@@ -1,0 +1,27 @@
+{
+  "name": "kacy",
+  "version": "1.0.0",
+  "description": "KOKOLIKOOO is Rwanda's leading poultry brand operated by Kacy Farms. Based in Gasabo District, Kigali, we specialize in high-volume poultry production with a 100% cold-chain guarantee for the hospitality and retail sectors.",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --watch",
+    "build": "npm run build:css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techinika/kacy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/techinika/kacy/issues"
+  },
+  "homepage": "https://github.com/techinika/kacy#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

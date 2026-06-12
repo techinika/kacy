@@ -1,21 +1,22 @@
-document.addEventListener("DOMContentLoaded", function () {
-  fetch("../components/navbar.html")
+function loadComponent(id, path) {
+  return fetch(path)
     .then((response) => {
-      if (!response.ok) throw new Error("Navbar not found");
+      if (!response.ok) throw new Error("Component not found: " + path);
       return response.text();
     })
     .then((data) => {
-      document.getElementById("navbar-placeholder").innerHTML = data;
-
-      initMobileMenu();
+      document.getElementById(id).innerHTML = data;
+      if (id === "navbar-placeholder") initMobileMenu();
     })
     .catch((err) => console.error(err));
+}
 
-  fetch("../components/footer.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById("footer-placeholder").innerHTML = data;
-    });
+document.addEventListener("DOMContentLoaded", function () {
+  const depth = window.location.pathname.split("/").length - 2;
+  const prefix = depth > 0 ? "../".repeat(depth) : "./";
+
+  loadComponent("navbar-placeholder", prefix + "components/navbar.html");
+  loadComponent("footer-placeholder", prefix + "components/footer.html");
 });
 
 function initMobileMenu() {
@@ -41,9 +42,3 @@ function initMobileMenu() {
     });
   });
 }
-
-createIcons({
-  icons: {
-    mail,
-  },
-});
