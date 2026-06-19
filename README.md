@@ -40,7 +40,7 @@ KACY/
 ├── js/
 │   └── main.js                   # Component loader + mobile menu
 ├── assets/
-│   └── images/                   # Brand images and logos
+│   └── images/                   # Brand images, logos, and delivery vehicle photos
 ├── tailwind.config.js            # Tailwind configuration
 ├── package.json                  # Build scripts
 ├── sitemap.xml                   # XML sitemap with image tags
@@ -107,6 +107,8 @@ All website copy is written in plain, conversational language. No jargon, no cor
 ## Updating Content
 
 - **Logo**: Replace `assets/images/kokolikooo.jpeg`
+- **Delivery Vehicle Photos**: Add/swap images in `assets/images/` (car 1–4.jpeg)
+- **Map**: Update embed URL in `contact/index.html`
 - **Navbar/Footer**: Edit `components/navbar.html` or `components/footer.html`
 - **Styles**: Edit `css/style.css`
 - **Contact Info**: Update in all HTML files and components
