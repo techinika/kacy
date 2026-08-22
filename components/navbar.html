@@ -1,12 +1,19 @@
 <nav
   class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-[100] border-b border-gray-100"
+  aria-label="Main navigation"
 >
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between h-20 items-center">
-      <a href="/" class="flex items-center group">
-        <img 
-          src="../assets/images/kokolikooo.jpeg" 
-          alt="KOKOLIKOOO - Rwanda's Premier Poultry Brand"
+      <a
+        href="/"
+        class="flex items-center group"
+        aria-label="KOKOLIKOOO by Kacy Farms — Home"
+      >
+        <img
+          src="/assets/images/kokolikooo-logo.webp"
+          alt="KOKOLIKOOO by Kacy Farms logo"
+          width="1527"
+          height="1064"
           class="h-12 sm:h-16 w-auto object-contain max-w-[150px] sm:max-w-none"
         />
       </a>
@@ -20,12 +27,17 @@
           >Home</a
         >
         <a
-          href="/about"
+          href="/about/"
           class="text-slate-600 hover:text-[#d72229] transition-colors"
           >About</a
         >
         <a
-          href="/contact"
+          href="/blog/"
+          class="text-slate-600 hover:text-[#d72229] transition-colors"
+          >Blog</a
+        >
+        <a
+          href="/contact/"
           class="bg-[#d72229] text-white px-6 py-2.5 rounded-full hover:bg-red-700 hover:shadow-lg hover:shadow-red-200 transition-all duration-300"
         >
           Contact Us
@@ -36,6 +48,9 @@
         <button
           id="mobile-menu-button"
           class="text-slate-900 focus:outline-none p-2"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Toggle navigation menu"
         >
           <svg
             id="menu-icon"
@@ -43,6 +58,7 @@
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
+            aria-hidden="true"
           >
             <path
               stroke-linecap="round"
@@ -57,6 +73,7 @@
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
+            aria-hidden="true"
           >
             <path
               stroke-linecap="round"
@@ -81,13 +98,18 @@
         >Home</a
       >
       <a
-        href="/about"
+        href="/about/"
         class="mobile-link block px-4 py-3 text-slate-600 hover:bg-gray-50 rounded-lg"
         >About Us</a
       >
+      <a
+        href="/blog/"
+        class="mobile-link block px-4 py-3 text-slate-600 hover:bg-gray-50 rounded-lg"
+        >Blog</a
+      >
       <div class="pt-4 px-4">
         <a
-          href="/contact"
+          href="/contact/"
           class="mobile-link block text-center bg-[#d72229] text-white py-4 rounded-xl shadow-md"
           >Get in Touch</a
         >

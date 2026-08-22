@@ -8,22 +8,18 @@
       name="description"
       content="KOKOLIKOOO by Kacy Farms — fresh chicken delivered to hotels, supermarkets, and restaurants across Kigali. 150 tons per year, always chilled, always on time."
     />
-    <meta
-      name="keywords"
-      content="KOKOLIKOOO, KOKOLIKOOO chicken, KOKOLIKOOO Rwanda, poultry Rwanda, chicken supplier Kigali, wholesale chicken Rwanda, broiler farms Rwanda, industrial poultry Rwanda, cold chain meat Rwanda"
-    />
     <meta name="author" content="Kacy Farms" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#d72229" />
     <link rel="canonical" href="https://kacy.rw/" />
-    <link rel="alternate" hreflang="en" href="https://kacy.rw/" />
-    <link rel="alternate" hreflang="rw" href="https://kacy.rw/" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="/assets/fonts/google-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://kit.fontawesome.com" />
-    <link rel="dns-prefetch" href="https://images.unsplash.com" />
+
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <link rel="stylesheet" href="/css/tailwind.css" />
+    <link rel="stylesheet" href="/css/style.css" />
 
     <script type="application/ld+json">
       {
@@ -32,11 +28,20 @@
           {
             "@type": "Organization",
             "@id": "https://kacy.rw/#organization",
-            "name": "KOKOLIKOOO",
-            "alternateName": "KOKOLIKOOO - Kacy Farms",
+            "name": "Kacy Farms",
+            "alternateName": "KOKOLIKOOO",
             "url": "https://kacy.rw/",
-            "logo": "https://kacy.rw/assets/images/kokolikooo.jpeg",
-            "description": "KOKOLIKOOO — fresh chicken delivered to hotels, supermarkets, and restaurants across Kigali. 150 tons per year, always chilled, always on time.",
+            "logo": {
+              "@type": "ImageObject",
+              "@id": "https://kacy.rw/assets/images/kokolikooo-logo.webp",
+              "url": "https://kacy.rw/assets/images/kokolikooo-logo.webp",
+              "width": 1527,
+              "height": 1064
+            },
+            "image": {
+              "@id": "https://kacy.rw/assets/images/og-image.jpg"
+            },
+            "description": "Kacy Farms produces 150 tons of fresh chicken every year for Kigali hotels, supermarkets, and restaurants under the KOKOLIKOOO brand. Always chilled, always on time.",
             "sameAs": [
               "https://www.facebook.com/kacyfarms",
               "https://www.instagram.com/kacyfarms",
@@ -46,21 +51,22 @@
           {
             "@type": "LocalBusiness",
             "@id": "https://kacy.rw/#localbusiness",
-            "name": "KOKOLIKOOO",
-            "description": "Fresh chicken for Kigali hotels, supermarkets, and restaurants. 150 tons per year, always chilled, always on time.",
+            "name": "KOKOLIKOOO by Kacy Farms",
+            "parentOrganization": { "@id": "https://kacy.rw/#organization" },
             "url": "https://kacy.rw/",
             "telephone": ["+250788309077", "+250788867296"],
             "email": "info@kacy.rw",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Cyanamo, Kabuga II, Rusororo, Gasabo District",
+              "streetAddress": "Cyanamo, Kabuga II, Rusororo",
               "addressLocality": "Kigali",
+              "addressRegion": "Gasabo",
               "addressCountry": "RW"
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": "-1.9403",
-              "longitude": "30.0619"
+              "latitude": -1.96148,
+              "longitude": 30.22732
             },
             "openingHoursSpecification": {
               "@type": "OpeningHoursSpecification",
@@ -75,15 +81,46 @@
               "opens": "08:00",
               "closes": "18:00"
             },
-            "image": "https://kacy.rw/assets/images/kokolikooo.jpeg",
-            "priceRange": "$$"
+            "image": { "@id": "https://kacy.rw/assets/images/og-image.jpg" },
+            "priceRange": "$$",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "KOKOLIKOOO Chicken Products",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Whole Broiler Chicken",
+                    "description": "Premium Grade-A birds (1.2kg–1.8kg). Cleaned, chilled, and ready for retail or industrial kitchens."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Specialized Chicken Cuts",
+                    "description": "Customized portioning: drumsticks, wings, thighs, and fillets vacuum-packed for freshness."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Custom Processing & Bulk Supply Contracts",
+                    "description": "Chicken processed to your kitchen's specifications, with recurring contracts and bulk pricing for hotels, supermarkets, and institutions."
+                  }
+                }
+              ]
+            }
           },
           {
             "@type": "WebSite",
             "@id": "https://kacy.rw/#website",
             "url": "https://kacy.rw/",
-            "name": "KOKOLIKOOO - Kacy Farms",
-            "publisher": { "@id": "https://kacy.rw/#organization" }
+            "name": "KOKOLIKOOO by Kacy Farms",
+            "publisher": { "@id": "https://kacy.rw/#organization" },
+            "inLanguage": "en"
           },
           {
             "@type": "BreadcrumbList",
@@ -96,36 +133,6 @@
                 "item": "https://kacy.rw/"
               }
             ]
-          },
-          {
-            "@type": "Product",
-            "@id": "https://kacy.rw/#product-whole-broilers",
-            "name": "Whole Broiler Chicken",
-            "description": "Premium Grade-A birds (1.2kg–1.8kg). Cleaned, chilled, and ready for retail or industrial kitchens.",
-            "brand": { "@id": "https://kacy.rw/#organization" },
-            "category": "Poultry",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "RWF",
-              "availability": "https://schema.org/InStock",
-              "url": "https://kacy.rw/"
-            }
-          },
-          {
-            "@type": "Product",
-            "@id": "https://kacy.rw/#product-cuts",
-            "name": "Specialized Chicken Cuts",
-            "description": "Customized portioning: Drumsticks, Wings, Thighs, and Fillets vacuum-packed for freshness.",
-            "brand": { "@id": "https://kacy.rw/#organization" },
-            "category": "Poultry",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "RWF",
-              "availability": "https://schema.org/InStock",
-              "url": "https://kacy.rw/"
-            }
           },
           {
             "@type": "FAQPage",
@@ -179,12 +186,15 @@
       property="og:description"
       content="Fresh chicken for Kigali hotels, supermarkets, and restaurants. Delivered chilled, always on time. 150 tons per year."
     />
+    <meta property="og:image" content="https://kacy.rw/assets/images/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta
-      property="og:image"
-      content="https://kacy.rw/assets/images/kokolikooo.jpeg"
+      property="og:image:alt"
+      content="KOKOLIKOOO by Kacy Farms — fresh chicken supplier in Kigali, Rwanda"
     />
     <meta property="og:locale" content="en_RW" />
-    <meta property="og:site_name" content="KOKOLIKOOO - Kacy Farms" />
+    <meta property="og:site_name" content="KOKOLIKOOO by Kacy Farms" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@KacyFarms" />
@@ -196,19 +206,18 @@
       name="twitter:description"
       content="Fresh chicken delivered to Kigali hotels, supermarkets, and restaurants. Always chilled, always on time."
     />
+    <meta name="twitter:image" content="https://kacy.rw/assets/images/og-image.jpg" />
     <meta
-      name="twitter:image"
-      content="https://kacy.rw/assets/images/kokolikooo.jpeg"
+      name="twitter:image:alt"
+      content="KOKOLIKOOO by Kacy Farms — fresh chicken supplier in Kigali, Rwanda"
     />
 
-    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
-    <link rel="stylesheet" href="./css/tailwind.css" />
-    <link rel="stylesheet" href="./css/style.css" />
     <script
+      defer
       src="https://kit.fontawesome.com/5f3cf1873e.js"
       crossorigin="anonymous"
     ></script>
-    <script src="js/main.js" type="module"></script>
+    <script src="/js/main.js" type="module"></script>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-81TW40GY2X"
@@ -224,656 +233,729 @@
     </script>
   </head>
   <body class="bg-white text-slate-900">
-    <div id="navbar-placeholder"></div>
-
-    <section
-      class="relative md:h-[90vh] lg:h-[90vh] py-10 flex items-center overflow-hidden bg-slate-900"
+    <nav
+      class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-[100] border-b border-gray-100"
+      aria-label="Main navigation"
     >
-      <div class="absolute inset-0 z-0">
-        <img
-          src="./assets/images/car 4.jpeg"
-          class="w-full h-full object-cover opacity-50 md:opacity-40 md:grayscale md:hover:grayscale-0 transition duration-[2s] rotate-180"
-          alt="Kacy Farms industrial poultry production facility"
-          loading="eager"
-          fetchpriority="high"
-        />
-        <div
-          class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/60 to-transparent"
-        ></div>
-      </div>
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+          <a
+            href="/"
+            class="flex items-center group"
+            aria-label="KOKOLIKOOO by Kacy Farms — Home"
+          >
+            <img
+              src="/assets/images/kokolikooo-logo.webp"
+              alt="KOKOLIKOOO by Kacy Farms logo"
+              width="1527"
+              height="1064"
+              class="h-12 sm:h-16 w-auto object-contain max-w-[150px] sm:max-w-none"
+            />
+          </a>
 
-      <div class="max-w-7xl mx-auto px-4 relative z-10 w-full">
-        <div class="max-w-3xl">
           <div
-            class="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 mb-8"
+            class="hidden md:flex space-x-8 font-semibold items-center text-sm uppercase tracking-wide"
           >
-            <i class="fa-solid fa-shield-check text-brand-red"></i>
-            <span
-              class="text-white text-[10px] font-black uppercase tracking-[0.3em]"
-            >
-              Fresh Chicken, Delivered Daily to Kigali
-            </span>
-          </div>
-
-          <h1
-            class="text-6xl lg:text-[100px] font-black text-white mb-6 leading-[0.85] tracking-tighter"
-          >
-            KOKOLIKOOO
-            <br /><span class="text-4xl lg:text-6xl text-slate-200"
-              >From KACY Farms</span
-            >
-          </h1>
-
-          <p
-            class="text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl border-l-4 border-brand-red pl-6"
-          >
-            Never run out of fresh chicken. We deliver
-            <span class="text-white font-bold">150 tons</span> every year
-            straight to your door &mdash; always chilled, always on time.
-            Hotels, supermarkets, and restaurants across Kigali trust us to keep
-            their kitchens running.
-          </p>
-
-          <div class="flex flex-wrap gap-6 items-center">
             <a
-              href="#products"
-              class="bg-brand-red text-white px-12 py-6 rounded-[2rem] font-black hover:bg-red-700 transition-all shadow-2xl shadow-red-900/50 flex items-center gap-3 uppercase text-sm tracking-widest"
+              href="/"
+              class="text-slate-900 hover:text-[#d72229] transition-colors"
+              >Home</a
             >
-              See What We Offer <i class="fa-solid fa-arrow-right text-xs"></i>
+            <a
+              href="/about/"
+              class="text-slate-600 hover:text-[#d72229] transition-colors"
+              >About</a
+            >
+            <a
+              href="/blog/"
+              class="text-slate-600 hover:text-[#d72229] transition-colors"
+              >Blog</a
+            >
+            <a
+              href="/contact/"
+              class="bg-[#d72229] text-white px-6 py-2.5 rounded-full hover:bg-red-700 hover:shadow-lg hover:shadow-red-200 transition-all duration-300"
+            >
+              Contact Us
             </a>
+          </div>
 
-            <div
-              class="flex gap-8 px-8 py-4 rounded-[2rem] bg-white/5 border border-white/10 backdrop-blur-sm"
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              class="text-slate-900 focus:outline-none p-2"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+              aria-label="Toggle navigation menu"
             >
-              <div class="text-center">
-                <p class="text-white font-black text-xl">12x</p>
-                <p
-                  class="text-[9px] uppercase font-bold text-slate-500 tracking-tighter"
-                >
-                  Batches Yearly
-                </p>
-              </div>
-              <div class="h-8 w-[1px] bg-white/10"></div>
-              <div class="text-center">
-                <p class="text-white font-black text-xl">24h</p>
-                <p
-                  class="text-[9px] uppercase font-bold text-slate-500 tracking-tighter"
-                >
-                  Farm-to-Door
-                </p>
-              </div>
-            </div>
+              <svg
+                id="menu-icon"
+                class="w-7 h-7"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+              <svg
+                id="close-icon"
+                class="w-7 h-7 hidden"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
-    </section>
 
-    <section id="products" class="py-24 bg-slate-200">
-      <div class="max-w-7xl mx-auto px-4">
-        <div
-          class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4"
-        >
-          <div>
-            <span
-              class="text-brand-red font-bold tracking-widest text-xs uppercase"
-              >Our Products</span
-            >
-            <h2
-              class="text-4xl lg:text-5xl font-black uppercase tracking-tighter mt-2"
-            >
-              <strong
-                >Fresh Chicken,
-                <span class="text-slate-400">Your Way</span></strong
-              >
-            </h2>
-            <div class="h-1.5 w-20 bg-brand-red mt-4"></div>
-          </div>
-          <p class="text-slate-500 max-w-md text-sm leading-relaxed">
-            We handle everything from raising the birds to delivering them to
-            your door. That means quality you can trust at every step.
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="group">
-            <div
-              class="relative overflow-hidden rounded-[2rem] mb-6 aspect-[4/5] bg-slate-100 shadow-sm border border-slate-100"
-            >
-              <img
-                src="https://www.jbfoodsyorkshire.com/product-images/26341-1.jpg"
-                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-                alt="Whole Broiler Chicken"
-                loading="lazy"
-              />
-              <div
-                class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-4 rounded-2xl"
-              >
-                <p class="text-[10px] font-black uppercase text-brand-red mb-1">
-                  Whole Chickens
-                </p>
-                <h4 class="font-bold text-slate-900">Whole Broilers</h4>
-                <p class="text-slate-500 text-xs leading-relaxed">
-                  Whole chickens, cleaned and chilled. Weights from 1.2kg to
-                  1.8kg. Ready for your kitchen or shop shelf.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="group">
-            <div
-              class="relative overflow-hidden rounded-[2rem] mb-6 aspect-[4/5] bg-slate-100 shadow-sm border border-slate-100"
-            >
-              <img
-                src="./assets/images/meat_cuts.jpg"
-                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-                alt="Chicken Special Cuts"
-                loading="lazy"
-              />
-              <div
-                class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-4 rounded-2xl"
-              >
-                <p class="text-[10px] font-black uppercase text-brand-red mb-1">
-                  Pre-Cut & Packed
-                </p>
-                <h4 class="font-bold text-slate-900">Special Cuts</h4>
-                <p class="text-slate-500 text-xs leading-relaxed">
-                  Drumsticks, wings, thighs, fillets; cut the way you need them.
-                  Vacuum-sealed to stay fresh longer.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="group">
-            <div
-              class="relative overflow-hidden rounded-[2rem] mb-6 aspect-[4/5] bg-slate-950 flex flex-col justify-end p-8 border border-slate-900"
-            >
-              <div class="mb-auto">
-                <i class="fa-solid fa-gears text-brand-red text-3xl"></i>
-              </div>
-              <h4 class="text-2xl font-bold text-white mb-2">
-                Custom Processing
-              </h4>
-              <p class="text-slate-400 text-xs leading-relaxed">
-                Need chicken processed a specific way? We can handle it. Just
-                tell us what your kitchen needs.
-              </p>
-              <div class="mt-4 h-[1px] w-full bg-white/10"></div>
-              <span
-                class="text-[10px] text-gray-100 font-bold uppercase mt-4 block"
-                >For Businesses</span
-              >
-            </div>
-          </div>
-
-          <div class="group">
-            <div
-              class="relative overflow-hidden rounded-[2rem] mb-6 aspect-[4/5] bg-slate-950 border border-slate-900"
-            >
-              <img
-                src="./assets/images/car 1.jpeg"
-                class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-60"
-                alt="Kacy Farms refrigerated delivery truck"
-                loading="lazy"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
-              <div class="relative z-10 p-8 flex flex-col justify-end h-full">
-                <div class="mb-auto">
-                  <i class="fa-solid fa-truck-box text-white text-3xl"></i>
-                </div>
-                <h4 class="text-2xl font-bold text-white mb-2">Bulk Orders</h4>
-                <p class="text-white/80 text-xs leading-relaxed">
-                  If you run a hotel or supermarket, we offer recurring contracts
-                  and bulk pricing. One order, regular deliveries.
-                </p>
-                <div class="mt-4 h-[1px] w-full bg-white/20"></div>
-                <span
-                  class="text-[10px] text-white font-bold uppercase mt-4 block"
-                  >150 Tons Per Year</span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-24 bg-slate-50">
       <div
-        class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-20 items-center"
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl"
       >
-        <div class="relative">
+        <div class="px-4 pt-4 pb-8 space-y-2 font-bold">
+          <a
+            href="/"
+            class="mobile-link block px-4 py-3 text-slate-900 hover:bg-gray-50 rounded-lg"
+            >Home</a
+          >
+          <a
+            href="/about/"
+            class="mobile-link block px-4 py-3 text-slate-600 hover:bg-gray-50 rounded-lg"
+            >About Us</a
+          >
+          <a
+            href="/blog/"
+            class="mobile-link block px-4 py-3 text-slate-600 hover:bg-gray-50 rounded-lg"
+            >Blog</a
+          >
+          <div class="pt-4 px-4">
+            <a
+              href="/contact/"
+              class="mobile-link block text-center bg-[#d72229] text-white py-4 rounded-xl shadow-md"
+              >Get in Touch</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section
+        class="relative md:h-[90vh] lg:h-[90vh] py-10 flex items-center overflow-hidden bg-slate-900"
+      >
+        <div class="absolute inset-0 z-0">
           <img
-            src="https://images.squarespace-cdn.com/content/v1/629f4cd312f5ad0b40dd2c3e/1668620956010-M3OPVJVMHOYL4JFAS3HT/image-asset.jpeg"
-            class="rounded-[3rem] shadow-2xl md:grayscale md:hover:grayscale-0 transition duration-700"
-            alt="Kacy Farms poultry processing facility"
-            loading="lazy"
+            src="/assets/images/kacy-farms-hero.webp"
+            width="1080"
+            height="810"
+            class="w-full h-full object-cover opacity-50 md:opacity-40 md:grayscale md:hover:grayscale-0 transition duration-[2s] rotate-180"
+            alt="Chilled chicken leaving the Kacy Farms facility for delivery across Kigali"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
           />
           <div
-            class="absolute -bottom-10 -right-10 bg-brand-red text-white p-12 rounded-3xl shadow-2xl hidden lg:block"
-          >
-            <p class="text-5xl font-black mb-1">97%</p>
+            class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/60 to-transparent"
+          ></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 relative z-10 w-full">
+          <div class="max-w-3xl">
+            <div
+              class="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 mb-8"
+            >
+              <i class="fa-solid fa-shield-check text-brand-red"></i>
+              <span
+                class="text-white text-[10px] font-black uppercase tracking-[0.3em]"
+              >
+                Fresh Chicken, Delivered Daily to Kigali
+              </span>
+            </div>
+
+            <h1
+              class="text-6xl lg:text-[100px] font-black text-white mb-6 leading-[0.85] tracking-tighter"
+            >
+              KOKOLIKOOO
+              <br /><span class="text-4xl lg:text-6xl text-slate-200"
+                >From KACY Farms</span
+              >
+            </h1>
+
             <p
-              class="text-[10px] font-bold uppercase tracking-widest opacity-80"
+              class="text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl border-l-4 border-brand-red pl-6"
             >
-              Healthy & Thriving Flock
+              Never run out of fresh chicken. We deliver
+              <span class="text-white font-bold">150 tons</span> every year
+              straight to your door &mdash; always chilled, always on time.
+              Hotels, supermarkets, and restaurants across Kigali trust us to
+              keep their kitchens running.
             </p>
+
+            <div class="flex flex-wrap gap-6 items-center">
+              <a
+                href="#products"
+                class="bg-brand-red text-white px-12 py-6 rounded-[2rem] font-black hover:bg-red-700 transition-all shadow-2xl shadow-red-900/50 flex items-center gap-3 uppercase text-sm tracking-widest"
+              >
+                See What We Offer <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+
+              <div
+                class="flex gap-8 px-8 py-4 rounded-[2rem] bg-white/5 border border-white/10 backdrop-blur-sm"
+              >
+                <div class="text-center">
+                  <p class="text-white font-black text-xl">12x</p>
+                  <p
+                    class="text-[9px] uppercase font-bold text-slate-500 tracking-tighter"
+                  >
+                    Batches Yearly
+                  </p>
+                </div>
+                <div class="h-8 w-[1px] bg-white/10"></div>
+                <div class="text-center">
+                  <p class="text-white font-black text-xl">24h</p>
+                  <p
+                    class="text-[9px] uppercase font-bold text-slate-500 tracking-tighter"
+                  >
+                    Farm-to-Door
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div>
-          <h2 class="text-5xl font-black leading-tight mb-8">
-            Quality You Can <br /><span class="text-brand-red"
-              >Rely On, Every Time.</span
+      </section>
+
+      <section id="products" class="py-24 bg-slate-200">
+        <div class="max-w-7xl mx-auto px-4">
+          <div
+            class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4"
+          >
+            <div>
+              <span
+                class="text-brand-red font-bold tracking-widest text-xs uppercase"
+                >Our Products</span
+              >
+              <h2
+                class="text-4xl lg:text-5xl font-black uppercase tracking-tighter mt-2"
+              >
+                <strong
+                  >Fresh Chicken,
+                  <span class="text-slate-400">Your Way</span></strong
+                >
+              </h2>
+              <div class="h-1.5 w-20 bg-brand-red mt-4"></div>
+            </div>
+            <p class="text-slate-500 max-w-md text-sm leading-relaxed">
+              We handle everything from raising the birds to delivering them to
+              your door. That means quality you can trust at every step.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="group">
+              <div
+                class="relative overflow-hidden rounded-[2rem] mb-6 aspect-[4/5] bg-slate-100 shadow-sm border border-slate-100"
+              >
+                <img
+                  src="/assets/images/whole-broilers.webp"
+                  width="900"
+                  height="900"
+                  class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                  alt="Whole broiler chicken, cleaned and chilled, from KOKOLIKOOO"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div
+                  class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-4 rounded-2xl"
+                >
+                  <p class="text-[10px] font-black uppercase text-brand-red mb-1">
+                    Whole Chickens
+                  </p>
+                  <h3 class="font-bold text-slate-900">Whole Broilers</h3>
+                  <p class="text-slate-500 text-xs leading-relaxed">
+                    Whole chickens, cleaned and chilled. Weights from 1.2kg to
+                    1.8kg. Ready for your kitchen or shop shelf.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="group">
+              <div
+                class="relative overflow-hidden rounded-[2rem] mb-6 aspect-[4/5] bg-slate-100 shadow-sm border border-slate-100"
+              >
+                <img
+                  src="/assets/images/chicken-cuts.webp"
+                  width="1500"
+                  height="1125"
+                  class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                  alt="Vacuum-packed chicken cuts: drumsticks, wings, thighs, and fillets"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div
+                  class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-4 rounded-2xl"
+                >
+                  <p class="text-[10px] font-black uppercase text-brand-red mb-1">
+                    Pre-Cut & Packed
+                  </p>
+                  <h3 class="font-bold text-slate-900">Special Cuts</h3>
+                  <p class="text-slate-500 text-xs leading-relaxed">
+                    Drumsticks, wings, thighs, fillets; cut the way you need them.
+                    Vacuum-sealed to stay fresh longer.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="group">
+              <div
+                class="relative overflow-hidden rounded-[2rem] mb-6 aspect-[4/5] bg-slate-950 flex flex-col justify-end p-8 border border-slate-900"
+              >
+                <div class="mb-auto">
+                  <i class="fa-solid fa-gears text-brand-red text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2">
+                  Custom Processing
+                </h3>
+                <p class="text-slate-400 text-xs leading-relaxed">
+                  Need chicken processed a specific way? We can handle it. Just
+                  tell us what your kitchen needs.
+                </p>
+                <div class="mt-4 h-[1px] w-full bg-white/10"></div>
+                <span
+                  class="text-[10px] text-gray-100 font-bold uppercase mt-4 block"
+                  >For Businesses</span
+                >
+              </div>
+            </div>
+
+            <div class="group">
+              <div
+                class="relative overflow-hidden rounded-[2rem] mb-6 aspect-[4/5] bg-slate-950 border border-slate-900"
+              >
+                <img
+                  src="/assets/images/delivery-truck-1.webp"
+                  width="1280"
+                  height="960"
+                  class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-60"
+                  alt="Kacy Farms refrigerated delivery truck for bulk chicken orders"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+                <div class="relative z-10 p-8 flex flex-col justify-end h-full">
+                  <div class="mb-auto">
+                    <i class="fa-solid fa-truck-box text-white text-3xl"></i>
+                  </div>
+                  <h3 class="text-2xl font-bold text-white mb-2">Bulk Orders</h3>
+                  <p class="text-white/80 text-xs leading-relaxed">
+                    If you run a hotel or supermarket, we offer recurring contracts
+                    and bulk pricing. One order, regular deliveries.
+                  </p>
+                  <div class="mt-4 h-[1px] w-full bg-white/20"></div>
+                  <span
+                    class="text-[10px] text-white font-bold uppercase mt-4 block"
+                    >150 Tons Per Year</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-24 bg-slate-50">
+        <div
+          class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-20 items-center"
+        >
+          <div class="relative">
+            <img
+              src="/assets/images/processing-facility.webp"
+              width="1400"
+              height="937"
+              class="rounded-[3rem] shadow-2xl md:grayscale md:hover:grayscale-0 transition duration-700"
+              alt="Inside the Kacy Farms poultry processing facility in Rusororo, Kigali"
+              loading="lazy"
+              decoding="async"
+            />
+            <div
+              class="absolute -bottom-10 -right-10 bg-brand-red text-white p-12 rounded-3xl shadow-2xl hidden lg:block"
             >
+              <p class="text-5xl font-black mb-1">97%</p>
+              <p
+                class="text-[10px] font-bold uppercase tracking-widest opacity-80"
+              >
+                Healthy & Thriving Flock
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2 class="text-5xl font-black leading-tight mb-8">
+              Quality You Can <br /><span class="text-brand-red"
+                >Rely On, Every Time.</span
+              >
+            </h2>
+            <p class="text-lg text-slate-600 mb-10 leading-relaxed">
+              From our farm to your kitchen &mdash; we take care of everything in
+              between. Cleanliness and safety are non-negotiable. That's why
+              Kigali's best kitchens choose <strong>KOKOLIKOOO</strong>.
+            </p>
+
+            <div class="space-y-8">
+              <div class="flex gap-6">
+                <span class="text-3xl"
+                  ><i class="fa-solid fa-laptop-code"></i
+                ></span>
+                <div>
+                  <h3 class="font-bold text-xl mb-1">Modern Processing</h3>
+                  <p class="text-slate-500 text-sm">
+                    Our automated systems mean cleaner, safer chicken with less
+                    handling. The result: better quality for your kitchen.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-6">
+                <span class="text-3xl"
+                  ><i class="fa-solid fa-chart-column"></i
+                ></span>
+                <div>
+                  <h3 class="font-bold text-xl mb-1">Consistent Quality</h3>
+                  <p class="text-slate-500 text-sm">
+                    Every bird is weighed and inspected so you get the same
+                    quality every time you order. No surprises.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+          <h2 class="text-3xl font-black uppercase mb-12 tracking-tighter">
+            Who We Serve
           </h2>
-          <p class="text-lg text-slate-600 mb-10 leading-relaxed">
-            From our farm to your kitchen &mdash; we take care of everything in
-            between. Cleanliness and safety are non-negotiable. That's why
-            Kigali's best kitchens choose <strong>KOKOLIKOOO</strong>.
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div
+              class="p-10 border border-slate-100 rounded-[2rem] flex flex-col items-center group hover:border-brand-red transition-all"
+            >
+              <span class="text-4xl mb-4 group-hover:scale-110 transition"
+                ><i class="fa-solid fa-hotel"></i
+              ></span>
+              <span
+                class="font-bold text-slate-400 uppercase tracking-widest text-xs group-hover:text-slate-900"
+                >Hotels</span
+              >
+            </div>
+            <div
+              class="p-10 border border-slate-100 rounded-[2rem] flex flex-col items-center group hover:border-brand-red transition-all"
+            >
+              <span class="text-4xl mb-4 group-hover:scale-110 transition"
+                ><i class="fa-solid fa-basket-shopping"></i
+              ></span>
+              <span
+                class="font-bold text-slate-400 uppercase tracking-widest text-xs group-hover:text-slate-900"
+                >Supermarket Chains</span
+              >
+            </div>
+            <div
+              class="p-10 border border-slate-100 rounded-[2rem] flex flex-col items-center group hover:border-brand-red transition-all"
+            >
+              <span class="text-4xl mb-4 group-hover:scale-110 transition"
+                ><i class="fa-solid fa-utensils"></i
+              ></span>
+              <span
+                class="font-bold text-slate-400 uppercase tracking-widest text-xs group-hover:text-slate-900"
+                >Fine Dining</span
+              >
+            </div>
+            <div
+              class="p-10 border border-slate-100 rounded-[2rem] flex flex-col items-center group hover:border-brand-red transition-all"
+            >
+              <span class="text-4xl mb-4 group-hover:scale-110 transition"
+                ><i class="fa-solid fa-building"></i
+              ></span>
+              <span
+                class="font-bold text-slate-400 uppercase tracking-widest text-xs group-hover:text-slate-900"
+                >Large Institutions</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-24 bg-slate-100">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+          <h2 class="text-4xl font-black mb-6">
+            Working Toward Rwanda's Highest Standards
+          </h2>
+          <p class="text-slate-500 mb-16">
+            We're in the process of earning the certifications that matter most
+            to our customers. Here's where we stand.
           </p>
 
-          <div class="space-y-8">
-            <div class="flex gap-6">
-              <span class="text-3xl"
-                ><i class="fa-solid fa-laptop-code"></i
-              ></span>
-              <div>
-                <h4 class="font-bold text-xl mb-1">Modern Processing</h4>
-                <p class="text-slate-500 text-sm">
-                  Our automated systems mean cleaner, safer chicken with less
-                  handling. The result: better quality for your kitchen.
-                </p>
-              </div>
+          <div
+            class="grid grid-cols-2 md:grid-cols-3 gap-12 items-center opacity-60"
+          >
+            <div class="space-y-4">
+              <img
+                src="/assets/images/rsb-logo.webp"
+                width="791"
+                height="519"
+                class="h-20 w-auto mx-auto object-contain md:grayscale md:hover:grayscale-0 transition cursor-default"
+                alt="Rwanda Standards Board (RSB) certification logo"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="text-[10px] font-bold uppercase tracking-[0.3em]">RSB</p>
             </div>
-            <div class="flex gap-6">
-              <span class="text-3xl"
-                ><i class="fa-solid fa-chart-column"></i
-              ></span>
-              <div>
-                <h4 class="font-bold text-xl mb-1">Consistent Quality</h4>
-                <p class="text-slate-500 text-sm">
-                  Every bird is weighed and inspected so you get the same
-                  quality every time you order. No surprises.
-                </p>
-              </div>
+            <div class="space-y-4">
+              <img
+                src="/assets/images/haccp-logo-dark.webp"
+                width="600"
+                height="132"
+                class="h-20 w-auto mx-auto object-contain md:grayscale md:hover:grayscale-0 transition cursor-default"
+                alt="HACCP food safety certification logo"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="text-[10px] font-bold uppercase tracking-[0.3em]">
+                HACCP
+              </p>
+            </div>
+            <div class="space-y-4">
+              <img
+                src="/assets/images/rica-logo.webp"
+                width="479"
+                height="105"
+                class="h-20 w-auto mx-auto object-contain md:grayscale md:hover:grayscale-0 transition cursor-default"
+                alt="RICA certification logo"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="text-[10px] font-bold uppercase tracking-[0.3em]">RICA</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="py-24 bg-white">
-      <div class="max-w-7xl mx-auto px-4 text-center">
-        <h2 class="text-3xl font-black uppercase mb-12 tracking-tighter">
-          Who We Serve
-        </h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div
-            class="p-10 border border-slate-100 rounded-[2rem] flex flex-col items-center group hover:border-brand transition-all"
+      <section class="py-24 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4">
+          <span
+            class="text-brand-red font-bold tracking-widest text-xs uppercase block text-center"
+            >FAQ</span
           >
-            <span class="text-4xl mb-4 group-hover:scale-110 transition"
-              ><i class="fa-solid fa-hotel"></i
-            ></span>
-            <span
-              class="font-bold text-slate-400 uppercase tracking-widest text-xs group-hover:text-slate-900"
-              >Hotels</span
-            >
-          </div>
-          <div
-            class="p-10 border border-slate-100 rounded-[2rem] flex flex-col items-center group hover:border-brand-red transition-all"
-          >
-            <span class="text-4xl mb-4 group-hover:scale-110 transition"
-              ><i class="fa-solid fa-basket-shopping"></i
-            ></span>
-            <span
-              class="font-bold text-slate-400 uppercase tracking-widest text-xs group-hover:text-slate-900"
-              >Supermarket Chains</span
-            >
-          </div>
-          <div
-            class="p-10 border border-slate-100 rounded-[2rem] flex flex-col items-center group hover:border-brand-red transition-all"
-          >
-            <span class="text-4xl mb-4 group-hover:scale-110 transition"
-              ><i class="fa-solid fa-utensils"></i
-            ></span>
-            <span
-              class="font-bold text-slate-400 uppercase tracking-widest text-xs group-hover:text-slate-900"
-              >Fine Dining</span
-            >
-          </div>
-          <div
-            class="p-10 border border-slate-100 rounded-[2rem] flex flex-col items-center group hover:border-brand-red transition-all"
-          >
-            <span class="text-4xl mb-4 group-hover:scale-110 transition"
-              ><i class="fa-solid fa-building"></i
-            ></span>
-            <span
-              class="font-bold text-slate-400 uppercase tracking-widest text-xs group-hover:text-slate-900"
-              >Large Institutions</span
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- <section class="py-24 bg-white">
-      <div class="max-w-7xl mx-auto px-4 text-center">
-        <span
-          class="text-brand-red font-bold tracking-widest text-xs uppercase"
-          >Testimonials</span
-        >
-        <h2
-          class="text-4xl lg:text-5xl font-black uppercase tracking-tighter mt-2 mb-4"
-        >
-          What Our <span class="text-brand-red">Customers Say</span>
-        </h2>
-        <p class="text-slate-500 mb-16 max-w-2xl mx-auto">
-          Here's what Kigali's chefs and procurement managers say about working
-          with us.
-        </p>
-
-        <div class="grid md:grid-cols-3 gap-8 text-left">
-          <div
-            class="p-8 rounded-[2rem] bg-slate-50 border border-slate-100 relative"
-          >
-            <i
-              class="fa-solid fa-quote-left text-brand-red/20 text-5xl absolute top-6 right-6"
-            ></i>
-            <div class="flex items-center gap-3 mb-6">
-              <div
-                class="w-14 h-14 rounded-full bg-slate-200 flex items-center justify-center text-slate-500"
-              >
-                <i class="fa-solid fa-user-tie text-xl"></i>
-              </div>
-              <div>
-                <p class="font-bold text-sm">Jean-Pierre Kagame</p>
-                <p class="text-xs text-slate-400">
-                  F&B Director, Kigali Marriott
-                </p>
-              </div>
-            </div>
-            <p class="text-slate-600 text-sm leading-relaxed">
-              "We never worry about running out of chicken. KOKOLIKOOO delivers
-              on time, every time, and the quality is always the same. That's
-              exactly what a busy hotel kitchen needs."
-            </p>
-          </div>
-
-          <div
-            class="p-8 rounded-[2rem] bg-slate-50 border border-slate-100 relative"
-          >
-            <i
-              class="fa-solid fa-quote-left text-brand-red/20 text-5xl absolute top-6 right-6"
-            ></i>
-            <div class="flex items-center gap-3 mb-6">
-              <div
-                class="w-14 h-14 rounded-full bg-slate-200 flex items-center justify-center text-slate-500"
-              >
-                <i class="fa-solid fa-user-tie text-xl"></i>
-              </div>
-              <div>
-                <p class="font-bold text-sm">Alice Mukamana</p>
-                <p class="text-xs text-slate-400">
-                  Procurement Manager, Nakumatt Kigali
-                </p>
-              </div>
-            </div>
-            <p class="text-slate-600 text-sm leading-relaxed">
-              "Since switching to KOKOLIKOOO, our poultry section has been so
-              much easier to manage. Less waste, better quality, and our
-              customers notice the difference."
-            </p>
-          </div>
-
-          <div
-            class="p-8 rounded-[2rem] bg-slate-50 border border-slate-100 relative"
-          >
-            <i
-              class="fa-solid fa-quote-left text-brand-red/20 text-5xl absolute top-6 right-6"
-            ></i>
-            <div class="flex items-center gap-3 mb-6">
-              <div
-                class="w-14 h-14 rounded-full bg-slate-200 flex items-center justify-center text-slate-500"
-              >
-                <i class="fa-solid fa-user-chef text-xl"></i>
-              </div>
-              <div>
-                <p class="font-bold text-sm">Chef David Niyonzima</p>
-                <p class="text-xs text-slate-400">
-                  Executive Chef, Serena Hotel Kigali
-                </p>
-              </div>
-            </div>
-            <p class="text-slate-600 text-sm leading-relaxed">
-              "I used to import chicken fillets. Now I get better quality from
-              KOKOLIKOOO, delivered right here in Kigali. It's exactly what
-              Rwanda's chefs have been waiting for."
-            </p>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <section class="py-24 bg-slate-100">
-      <div class="max-w-4xl mx-auto px-4 text-center">
-        <h2 class="text-4xl font-black mb-6">
-          Working Toward Rwanda's Highest Standards
-        </h2>
-        <p class="text-slate-500 mb-16">
-          We're in the process of earning the certifications that matter most to
-          our customers. Here's where we stand.
-        </p>
-
-        <div
-          class="grid grid-cols-2 md:grid-cols-3 gap-12 items-center opacity-60"
-        >
-          <div class="space-y-4">
-            <img
-              src="https://www.rsb.gov.rw/fileadmin/user_upload/Icons_logo/Logo-01.png"
-              class="h-20 mx-auto object-contain md:grayscale md:hover:grayscale-0 transition cursor-default"
-              alt="Rwanda Standards Board (RSB) certification logo"
-              loading="lazy"
-            />
-            <p class="text-[10px] font-bold uppercase tracking-[0.3em]">RSB</p>
-          </div>
-          <div class="space-y-4">
-            <img
-              src="https://ehaccp.org/wp-content/uploads/logo-reversed.webp"
-              class="h-20 mx-auto object-contain md:grayscale md:hover:grayscale-0 transition cursor-default"
-              alt="HACCP food safety certification logo"
-              loading="lazy"
-            />
-            <p class="text-[10px] font-bold uppercase tracking-[0.3em]">
-              HACCP
-            </p>
-          </div>
-          <div class="space-y-4">
-            <img
-              src="./assets/images/rica.png"
-              class="h-20 mx-auto object-contain md:grayscale md:hover:grayscale-0 transition cursor-default"
-              alt="RICA certification logo"
-              loading="lazy"
-            />
-            <p class="text-[10px] font-bold uppercase tracking-[0.3em]">RICA</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-24 bg-slate-50">
-      <div class="max-w-4xl mx-auto px-4">
-        <span
-          class="text-brand-red font-bold tracking-widest text-xs uppercase block text-center"
-          >FAQ</span
-        >
-        <h2
-          class="text-4xl lg:text-5xl font-black uppercase tracking-tighter mt-2 mb-12 text-center"
-        >
-          Frequently Asked <span class="text-brand-red">Questions</span>
-        </h2>
-
-        <div class="space-y-4">
-          <details
-            class="group bg-white rounded-2xl p-6 border border-slate-100 open:border-brand-red transition-all"
-          >
-            <summary
-              class="flex items-center justify-between cursor-pointer font-bold text-lg"
-            >
-              What is Kacy Farms' annual poultry production capacity?
-              <i
-                class="fa-solid fa-chevron-down text-brand-red group-open:rotate-180 transition-transform"
-              ></i>
-            </summary>
-            <p class="mt-4 text-slate-600 leading-relaxed">
-              We produce 150 tons of fresh chicken every year, and we're
-              growing. Our plan is to go from 6,000 to 20,000 birds to keep up
-              with demand.
-            </p>
-          </details>
-
-          <details
-            class="group bg-white rounded-2xl p-6 border border-slate-100 open:border-brand-red transition-all"
-          >
-            <summary
-              class="flex items-center justify-between cursor-pointer font-bold text-lg"
-            >
-              Do you deliver fresh chicken to Kigali hotels and supermarkets?
-              <i
-                class="fa-solid fa-chevron-down text-brand-red group-open:rotate-180 transition-transform"
-              ></i>
-            </summary>
-            <p class="mt-4 text-slate-600 leading-relaxed">
-              Yes. We deliver fresh, chilled chicken across Kigali within 24
-              hours. Hotels, supermarkets, restaurants; if you run a kitchen, we
-              can help.
-            </p>
-          </details>
-
-          <details
-            class="group bg-white rounded-2xl p-6 border border-slate-100 open:border-brand-red transition-all"
-          >
-            <summary
-              class="flex items-center justify-between cursor-pointer font-bold text-lg"
-            >
-              What products does Kacy Farms offer?
-              <i
-                class="fa-solid fa-chevron-down text-brand-red group-open:rotate-180 transition-transform"
-              ></i>
-            </summary>
-            <p class="mt-4 text-slate-600 leading-relaxed">
-              Whole chickens, drumsticks, wings, thighs, fillets; and if you
-              need something custom, just ask. We also offer wholesale contracts
-              for regular buyers.
-            </p>
-          </details>
-
-          <details
-            class="group bg-white rounded-2xl p-6 border border-slate-100 open:border-brand-red transition-all"
-          >
-            <summary
-              class="flex items-center justify-between cursor-pointer font-bold text-lg"
-            >
-              Where is Kacy Farms located?
-              <i
-                class="fa-solid fa-chevron-down text-brand-red group-open:rotate-180 transition-transform"
-              ></i>
-            </summary>
-            <p class="mt-4 text-slate-600 leading-relaxed">
-              We're based in Gasabo District, Rusororo, Kigali. Our farm and
-              processing facility are both on-site, so everything happens in one
-              place.
-            </p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- <section id="logistics" class="py-24 bg-white">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-16">
           <h2
-            class="text-4xl font-black uppercase tracking-tighter text-brand-red"
+            class="text-4xl lg:text-5xl font-black uppercase tracking-tighter mt-2 mb-12 text-center"
           >
-            From Our Farm to Your Kitchen
+            Frequently Asked <span class="text-brand-red">Questions</span>
           </h2>
-          <p class="text-slate-500 mt-2 font-semibold">
-            Fresh, chilled, and delivered every step of the way
-          </p>
-        </div>
 
-        <div class="grid md:grid-cols-4 gap-8 relative">
-          <div class="text-center relative z-10">
-            <div
-              class="w-20 h-20 bg-slate-950 text-white rounded-full flex items-center justify-center mx-auto mb-6 font-black text-2xl shadow-xl shadow-slate-200"
+          <div class="space-y-4">
+            <details
+              class="group bg-white rounded-2xl p-6 border border-slate-100 open:border-brand-red transition-all"
             >
-              1
-            </div>
-            <h4 class="font-bold mb-2">Raised With Care</h4>
-            <p class="text-xs text-slate-500">
-              Our chickens are raised in clean, modern facilities designed for
-              their health and comfort.
-            </p>
-          </div>
-          <div class="text-center relative z-10">
-            <div
-              class="w-20 h-20 bg-slate-950 text-white rounded-full flex items-center justify-center mx-auto mb-6 font-black text-2xl shadow-xl shadow-slate-200"
-            >
-              2
-            </div>
-            <h4 class="font-bold mb-2">Carefully Processed</h4>
-            <p class="text-xs text-slate-500">
-              We process each bird with care in a clean, modern facility.
-            </p>
-          </div>
-          <div class="text-center relative z-10">
-            <div
-              class="w-20 h-20 bg-brand-red text-white rounded-full flex items-center justify-center mx-auto mb-6 font-black text-2xl shadow-xl shadow-red-200"
-            >
-              3
-            </div>
-            <h4 class="font-bold mb-2 text-brand-red">Kept Cold</h4>
-            <p class="text-xs text-slate-500">
-              Your order travels in refrigerated trucks to stay fresh from our
-              door to yours.
-            </p>
-          </div>
-          <div class="text-center relative z-10">
-            <div
-              class="w-20 h-20 bg-slate-950 text-white rounded-full flex items-center justify-center mx-auto mb-6 font-black text-2xl shadow-xl shadow-slate-200"
-            >
-              4
-            </div>
-            <h4 class="font-bold mb-2">At Your Door</h4>
-            <p class="text-xs text-slate-500">
-              Fresh, chilled, and ready to use. Delivered within 24 hours.
-            </p>
-          </div>
-        </div>
-
-        <div
-          class="mt-20 p-12 bg-slate-50 rounded-[3rem] flex flex-col md:flex-row items-center justify-between gap-8 border border-slate-100"
-        >
-          <div class="max-w-md">
-            <h4 class="text-3xl font-black mb-4 leading-tight">
-              Ready to get <br /><span class="text-brand-red"
-                >Started?</span
+              <summary
+                class="flex items-center justify-between cursor-pointer font-bold text-lg"
               >
-            </h4>
-            <p class="text-slate-500">
-              Talk to our sales team about pricing, contracts, and delivery
-              schedules. We make it easy.
+                What is Kacy Farms' annual poultry production capacity?
+                <i
+                  class="fa-solid fa-chevron-down text-brand-red group-open:rotate-180 transition-transform"
+                ></i>
+              </summary>
+              <p class="mt-4 text-slate-600 leading-relaxed">
+                We produce 150 tons of fresh chicken every year, and we're
+                growing. Our plan is to go from 6,000 to 20,000 birds to keep up
+                with demand.
+              </p>
+            </details>
+
+            <details
+              class="group bg-white rounded-2xl p-6 border border-slate-100 open:border-brand-red transition-all"
+            >
+              <summary
+                class="flex items-center justify-between cursor-pointer font-bold text-lg"
+              >
+                Do you deliver fresh chicken to Kigali hotels and supermarkets?
+                <i
+                  class="fa-solid fa-chevron-down text-brand-red group-open:rotate-180 transition-transform"
+                ></i>
+              </summary>
+              <p class="mt-4 text-slate-600 leading-relaxed">
+                Yes. We deliver fresh, chilled chicken across Kigali within 24
+                hours. Hotels, supermarkets, restaurants; if you run a kitchen, we
+                can help.
+              </p>
+            </details>
+
+            <details
+              class="group bg-white rounded-2xl p-6 border border-slate-100 open:border-brand-red transition-all"
+            >
+              <summary
+                class="flex items-center justify-between cursor-pointer font-bold text-lg"
+              >
+                What products does Kacy Farms offer?
+                <i
+                  class="fa-solid fa-chevron-down text-brand-red group-open:rotate-180 transition-transform"
+                ></i>
+              </summary>
+              <p class="mt-4 text-slate-600 leading-relaxed">
+                Whole chickens, drumsticks, wings, thighs, fillets; and if you
+                need something custom, just ask. We also offer wholesale contracts
+                for regular buyers.
+              </p>
+            </details>
+
+            <details
+              class="group bg-white rounded-2xl p-6 border border-slate-100 open:border-brand-red transition-all"
+            >
+              <summary
+                class="flex items-center justify-between cursor-pointer font-bold text-lg"
+              >
+                Where is Kacy Farms located?
+                <i
+                  class="fa-solid fa-chevron-down text-brand-red group-open:rotate-180 transition-transform"
+                ></i>
+              </summary>
+              <p class="mt-4 text-slate-600 leading-relaxed">
+                We're based in Gasabo District, Rusororo, Kigali. Our farm and
+                processing facility are both on-site, so everything happens in one
+                place.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-slate-950 text-gray-400 py-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-slate-800 pb-12 mb-12 gap-8"
+        >
+          <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
+            <a href="/">
+              <img
+                src="/assets/images/kokolikooo-logo.webp"
+                alt="KOKOLIKOOO - Rwanda's Premier Poultry Brand"
+                width="1527"
+                height="1064"
+                loading="lazy"
+                class="h-16 w-auto object-contain"
+              />
+            </a>
+            <p class="text-sm max-w-xs leading-relaxed">
+              Kigali's trusted poultry brand. Fresh chicken delivered to hotels,
+              supermarkets, and restaurants across the city.
             </p>
           </div>
-          <a
-            href="/contact"
-            class="bg-slate-900 text-white px-12 py-5 rounded-2xl font-black text-lg hover:bg-brand-red transition-all"
-            >Get a Quote</a
+
+          <nav
+            aria-label="Footer navigation"
+            class="flex flex-wrap gap-x-8 gap-y-4 text-sm font-semibold uppercase tracking-widest text-gray-300"
           >
+            <a href="/" class="hover:text-[#d72229] transition">Home</a>
+            <a href="/about/" class="hover:text-[#d72229] transition">About</a>
+            <a href="/blog/" class="hover:text-[#d72229] transition">Blog</a>
+            <a href="/contact/" class="hover:text-[#d72229] transition">Contact</a>
+          </nav>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-between gap-8 items-start">
+          <div itemscope itemtype="https://schema.org/LocalBusiness" class="space-y-2 text-sm">
+            <meta itemprop="name" content="KOKOLIKOOO by Kacy Farms" />
+            <meta itemprop="telephone" content="+250788309077" />
+            <meta itemprop="email" content="info@kacy.rw" />
+            <p class="text-gray-300 font-bold uppercase tracking-wider mb-3">
+              Headquarters
+            </p>
+            <p
+              itemprop="address"
+              itemscope
+              itemtype="https://schema.org/PostalAddress"
+              class="flex items-center gap-2"
+            >
+              <span class="font-bold">Location:</span>
+              <span
+                ><span itemprop="streetAddress">Cyanamo, Kabuga II, Rusororo</span>,
+                <span itemprop="addressLocality">Kigali</span></span
+              >
+            </p>
+            <p class="flex items-center gap-2">
+              <span class="font-bold">Phone:</span>
+              <a href="tel:+250788309077" class="hover:text-white transition">+250 788 309 077</a> |
+              <a href="tel:+250788867296" class="hover:text-white transition">+250 788 867 296</a>
+            </p>
+            <p class="flex items-center gap-2">
+              <span class="font-bold">Email:</span>
+              <a href="mailto:info@kacy.rw" class="hover:text-white transition">info@kacy.rw</a>
+            </p>
+          </div>
+
+          <div class="flex flex-col md:items-end">
+            <div class="flex gap-4 mb-4">
+              <a
+                href="https://www.facebook.com/kacyfarms"
+                target="_blank"
+                rel="noopener"
+                class="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center hover:bg-[#d72229] hover:text-white transition"
+              >
+                <span class="sr-only">Facebook</span>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/kacyfarms"
+                target="_blank"
+                rel="noopener"
+                class="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center hover:bg-[#d72229] hover:text-white transition"
+              >
+                <span class="sr-only">Instagram</span>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://twitter.com/KacyFarms"
+                target="_blank"
+                rel="noopener"
+                class="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center hover:bg-[#d72229] hover:text-white transition"
+              >
+                <span class="sr-only">X (Twitter)</span>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <p class="text-xs tracking-widest uppercase opacity-50 font-bold">
+              &copy; 2026 KOKOLIKOOO by Kacy Farms. All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
-    </section> -->
-
-    <div id="footer-placeholder"></div>
+    </footer>
   </body>
 </html>

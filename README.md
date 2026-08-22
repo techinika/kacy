@@ -12,39 +12,69 @@ KOKOLIKOOO is Kacy Farms' poultry brand, serving hotels, supermarkets, and resta
 
 | Page | URL | Description |
 |------|-----|-------------|
-| Home | `/` | Products, testimonials, FAQ |
-| About | `/about/` | Company story, team, values |
-| Contact | `/contact/` | Contact form, phone, location |
+| Home | `/` | Products, quality, certifications, FAQ |
+| About | `/about/` | Company story, business units, values |
+| Contact | `/contact/` | Contact form, phone, location map |
+| Blog | `/blog/` | Poultry sourcing insights for Kigali kitchens |
 | Privacy Policy | `/privacy-policy/` | Data handling policy |
 | 404 | `/404.html` | Custom error page |
+
+## Recent SEO work
+
+This is a static, SEO-first site. Highlights of the latest audit-driven refresh:
+
+- **Crawlable navigation**: the navbar and footer are inlined into every HTML
+  page (no client-side `fetch()`), so internal links are present in the HTML
+  source that crawlers see and there is no layout shift while they load.
+- **Valid structured data**: every page ships a valid `@graph` of
+  Organization → LocalBusiness → WebSite → BreadcrumbList (Article/BlogPosting
+  on blog posts, FAQPage on the home page). Product offers are expressed as an
+  `OfferCatalog` so no fabricated prices are ever published.
+- **Image SEO**: all images are self-hosted, WebP (logos/photos) or AVIF, carry
+  descriptive filenames and `alt` text, and have `width`/`height` to remove
+  layout shift. A dedicated 1200×630 `og-image.jpg` is used for social
+  previews.
+- **Performance**: Google Fonts (Google Sans) are self-hosted from
+  `/assets/fonts/` and preloaded; the Font Awesome kit is loaded with `defer`.
+- **Local SEO**: NAP (name/address/phone) is consistent across the footer,
+  JSON-LD, maps embed, and hCard; the LocalBusiness geo coordinates match the
+  Google Maps pin.
+- **Content**: a `Blog` section targets long-tail Kigali/B2B queries such as
+  "chicken supplier Kigali", "whole chicken vs cuts", and "chicken cold chain".
 
 ## Project Structure
 
 ```
 KACY/
-├── index.html                    # Home page
-├── 404.html                      # Error page
+├── index.html                     # Home page
+├── 404.html                       # Error page
 ├── about/
-│   └── index.html                # About page
+│   └── index.html                 # About page
+├── blog/
+│   ├── index.html                 # Blog index
+│   ├── choose-chicken-supplier-kigali/index.html
+│   ├── whole-chicken-vs-cuts/index.html
+│   └── cold-chain-fresh-chicken/index.html
 ├── contact/
-│   └── index.html                # Contact page
+│   └── index.html                 # Contact page
 ├── privacy-policy/
-│   └── index.html                # Privacy policy
+│   └── index.html                 # Privacy policy
 ├── components/
-│   ├── navbar.html               # Reusable navigation
-│   └── footer.html               # Reusable footer
+│   ├── navbar.html                # Navigation (inlined into every page)
+│   └── footer.html                # Footer (inlined into every page)
 ├── css/
-│   ├── style.css                 # Custom styles
-│   ├── tailwind.css              # Built Tailwind CSS (generated)
-│   └── input.css                 # Tailwind entry point
+│   ├── style.css                  # Custom styles (self-hosted font, utilities)
+│   ├── tailwind.css               # Built Tailwind CSS (generated)
+│   └── input.css                  # Tailwind entry point
 ├── js/
-│   └── main.js                   # Component loader + mobile menu
+│   └── main.js                    # Mobile menu + hydration (no content fetch)
 ├── assets/
-│   └── images/                   # Brand images, logos, and delivery vehicle photos
-├── tailwind.config.js            # Tailwind configuration
-├── package.json                  # Build scripts
-├── sitemap.xml                   # XML sitemap with image tags
-└── robots.txt                    # Search engine config
+│   ├── fonts/google-sans-latin.woff2   # Self-hosted Google Sans (latin subset)
+│   └── images/                    # WebP/AVIF assets only
+├── tailwind.config.js             # Tailwind configuration
+├── package.json                   # Build scripts
+├── sitemap.xml                    # XML sitemap with image tags
+└── robots.txt                     # Search engine config
 ```
 
 ## Development
@@ -86,11 +116,16 @@ This generates a minified `css/tailwind.css` from the HTML content sources. Alwa
 
 ## SEO
 
-- **Structured Data**: Organization, LocalBusiness, Product, FAQPage, BreadcrumbList
-- **Open Graph + Twitter Cards**: Social preview tags on every page
-- **Sitemap**: XML with image tags, submitted via robots.txt
-- **Hreflang**: English and Kinyarwanda language tags
-- **Canonical URLs**: Prevents duplicate content issues
+- **Structured Data**: Organization, LocalBusiness, OfferCatalog, FAQPage,
+  BreadcrumbList (BlogPosting/Article on blog posts) — all valid `@graph`.
+- **Open Graph + Twitter Cards**: `og-image.jpg` (1200×630) preview tags with
+  dimensions and alt text on every page.
+- **Sitemap**: XML with image tags, submitted via robots.txt.
+- **Local SEO**: Consistent NAP across footer, JSON-LD, and hCard; geo coords
+  match the Google Maps pin.
+- **Canonical URLs**: Trailing-slash canonicals on every page; no `hreflang`
+  (single-language site).
+- **Content**: `/blog/` targets long-tail Kigali/B2B queries.
 
 ## Copy Style
 
@@ -98,21 +133,35 @@ All website copy is written in plain, conversational language. No jargon, no cor
 
 ## Technologies
 
-- **HTML5**: Semantic markup
+- **HTML5**: Semantic markup, inlined navbar/footer for crawlability
 - **Tailwind CSS v3**: Pre-built via CLI (not CDN)
-- **Vanilla JavaScript**: ES6 modules
-- **Font Awesome**: Icons (CDN)
-- **Google Fonts**: Google Sans
+- **Vanilla JavaScript**: ES6 modules (mobile menu only; no content fetching)
+- **Font Awesome**: Icons via deferred kit script (CDN)
+- **Fonts**: Google Sans (self-hosted latin-subset WOFF2 in `/assets/fonts/`)
+- **Analytics**: Google Analytics 4 (gtag, async)
 
 ## Updating Content
 
-- **Logo**: Replace `assets/images/kokolikooo.jpeg`
-- **Delivery Vehicle Photos**: Add/swap images in `assets/images/` (car 1–4.jpeg)
-- **Map**: Update embed URL in `contact/index.html`
-- **Navbar/Footer**: Edit `components/navbar.html` or `components/footer.html`
-- **Styles**: Edit `css/style.css`
-- **Contact Info**: Update in all HTML files and components
-- **After any HTML change**: Run `npm run build:css`
+> The navbar and footer are **inlined into every HTML page** rather than loaded
+> via JavaScript. When you update `components/navbar.html` or
+> `components/footer.html`, apply the same change in every page's nav/footer
+> block. There is **no JS component loader**, so static edits are instantly live.
+
+- **Logo**: Replace `assets/images/kokolikooo-logo.webp`. It is referenced in
+  the navbar, footer, and JSON-LD `logo`/`og:image` of every page.
+- **Hero image**: Replace `assets/images/kacy-farms-hero.webp` on the home page.
+- **Delivery vehicle / facility photos**: swap `delivery-truck-*.webp`,
+  `processing-facility.webp`, `kacy-motel.webp`, `real-estate.webp`.
+- **Social links**: update the social `<a>` hrefs and the `sameAs` JSON-LD
+  arrays (one source of truth: `components/footer.html` + the Organization
+  block on each page).
+- **Fonts**: the Google Sans WOFF2 is self-hosted in `assets/fonts/`. Edit the
+  `@font-face` rule in `css/style.css`, not a `<link>` to Google Fonts.
+- **Contact Info**: NAP lives in `components/footer.html`, `contact/index.html`,
+  and the LocalBusiness JSON-LD on every page — keep them in sync.
+- **After any HTML or Tailwind class change**: run `npm run build:css`
+  (Tailwind is purged against the HTML content). Static copy edits (text,
+  inline styles) need no build step.
 
 ## Contact
 

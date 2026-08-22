@@ -8,47 +8,121 @@
       name="description"
       content="Contact KOKOLIKOOO by Kacy Farms to order fresh chicken for your hotel, restaurant, or shop. Call +250 788 309 077 or +250 788 867 296."
     />
-    <meta
-      name="keywords"
-      content="KOKOLIKOOO contact, KOKOLIKOOO Rwanda, contact Kacy Farms, poultry supplier Rwanda, wholesale chicken order, buy bulk chicken Rwanda, Kigali poultry supplier"
-    />
     <meta name="author" content="Kacy Farms" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#d72229" />
     <link rel="canonical" href="https://kacy.rw/contact/" />
-    <link rel="alternate" hreflang="en" href="https://kacy.rw/contact/" />
-    <link rel="alternate" hreflang="rw" href="https://kacy.rw/contact/" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="/assets/fonts/google-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://kit.fontawesome.com" />
     <link rel="dns-prefetch" href="https://formspree.io" />
 
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <link rel="stylesheet" href="/css/tailwind.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ContactPage",
-        "mainEntity": {
-          "@type": "AgriculturalBusiness",
-          "name": "Kacy Farms",
-          "alternateName": "KOKOLIKOOO",
-          "url": "https://kacy.rw/",
-          "telephone": ["+250788309077", "+250788867296"],
-          "email": "info@kacy.rw",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Cyanamo, Kabuga II, Rusororo",
-            "addressLocality": "Gasabo, Kigali",
-            "addressCountry": "RW"
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://kacy.rw/#organization",
+            "name": "Kacy Farms",
+            "alternateName": "KOKOLIKOOO",
+            "url": "https://kacy.rw/",
+            "logo": {
+              "@type": "ImageObject",
+              "@id": "https://kacy.rw/assets/images/kokolikooo-logo.webp",
+              "url": "https://kacy.rw/assets/images/kokolikooo-logo.webp",
+              "width": 1527,
+              "height": 1064
+            },
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+250788309077",
+                "contactType": "customer service",
+                "areaServed": "RW",
+                "availableLanguage": ["en", "rw"]
+              },
+              {
+                "@type": "ContactPoint",
+                "telephone": "+250788867296",
+                "contactType": "sales",
+                "areaServed": "RW",
+                "availableLanguage": ["en", "rw"]
+              }
+            ],
+            "sameAs": [
+              "https://www.facebook.com/kacyfarms",
+              "https://www.instagram.com/kacyfarms",
+              "https://twitter.com/KacyFarms"
+            ]
+          },
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://kacy.rw/#localbusiness",
+            "name": "KOKOLIKOOO by Kacy Farms",
+            "parentOrganization": { "@id": "https://kacy.rw/#organization" },
+            "url": "https://kacy.rw/",
+            "telephone": ["+250788309077", "+250788867296"],
+            "email": "info@kacy.rw",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Cyanamo, Kabuga II, Rusororo",
+              "addressLocality": "Kigali",
+              "addressRegion": "Gasabo",
+              "addressCountry": "RW"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": -1.96148,
+              "longitude": 30.22732
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+              ],
+              "opens": "08:00",
+              "closes": "18:00"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://kacy.rw/contact/#webpage",
+            "url": "https://kacy.rw/contact/",
+            "name": "Contact KOKOLIKOOO — Wholesale Poultry Sales in Kigali",
+            "description": "Contact KOKOLIKOOO by Kacy Farms to order fresh chicken for your hotel, restaurant, or shop.",
+            "isPartOf": { "@id": "https://kacy.rw/#website" },
+            "about": { "@id": "https://kacy.rw/#localbusiness" },
+            "inLanguage": "en"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://kacy.rw/contact/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://kacy.rw/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Contact",
+                "item": "https://kacy.rw/contact/"
+              }
+            ]
           }
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kacy.rw/" },
-          { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://kacy.rw/contact/" }
         ]
       }
     </script>
@@ -63,12 +137,15 @@
       property="og:description"
       content="Contact KOKOLIKOOO by Kacy Farms to order fresh chicken. Call +250 788 309 077 or +250 788 867 296."
     />
+    <meta property="og:image" content="https://kacy.rw/assets/images/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta
-      property="og:image"
-      content="https://kacy.rw/assets/images/kokolikooo.jpeg"
+      property="og:image:alt"
+      content="KOKOLIKOOO by Kacy Farms — fresh chicken supplier in Kigali, Rwanda"
     />
     <meta property="og:locale" content="en_RW" />
-    <meta property="og:site_name" content="KOKOLIKOOO - Kacy Farms" />
+    <meta property="og:site_name" content="KOKOLIKOOO by Kacy Farms" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@KacyFarms" />
@@ -80,15 +157,18 @@
       name="twitter:description"
       content="Contact KOKOLIKOOO to order fresh chicken in Kigali. Call +250 788 309 077 or +250 788 867 296."
     />
+    <meta name="twitter:image" content="https://kacy.rw/assets/images/og-image.jpg" />
     <meta
-      name="twitter:image"
-      content="https://kacy.rw/assets/images/kokolikooo.jpeg"
+      name="twitter:image:alt"
+      content="KOKOLIKOOO by Kacy Farms — fresh chicken supplier in Kigali, Rwanda"
     />
 
-    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
-    <link rel="stylesheet" href="../css/tailwind.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <script src="../js/main.js" type="module"></script>
+    <script
+      defer
+      src="https://kit.fontawesome.com/5f3cf1873e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/main.js" type="module"></script>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-81TW40GY2X"
@@ -104,215 +184,462 @@
     </script>
   </head>
   <body class="bg-slate-50 text-slate-900">
-    <div id="navbar-placeholder"></div>
+    <nav
+      class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-[100] border-b border-gray-100"
+      aria-label="Main navigation"
+    >
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+          <a
+            href="/"
+            class="flex items-center group"
+            aria-label="KOKOLIKOOO by Kacy Farms — Home"
+          >
+            <img
+              src="/assets/images/kokolikooo-logo.webp"
+              alt="KOKOLIKOOO by Kacy Farms logo"
+              width="1527"
+              height="1064"
+              class="h-12 sm:h-16 w-auto object-contain max-w-[150px] sm:max-w-none"
+            />
+          </a>
 
-    <section class="bg-slate-950 py-24 text-white relative overflow-hidden">
+          <div
+            class="hidden md:flex space-x-8 font-semibold items-center text-sm uppercase tracking-wide"
+          >
+            <a
+              href="/"
+              class="text-slate-900 hover:text-[#d72229] transition-colors"
+              >Home</a
+            >
+            <a
+              href="/about/"
+              class="text-slate-600 hover:text-[#d72229] transition-colors"
+              >About</a
+            >
+            <a
+              href="/blog/"
+              class="text-slate-600 hover:text-[#d72229] transition-colors"
+              >Blog</a
+            >
+            <a
+              href="/contact/"
+              class="bg-[#d72229] text-white px-6 py-2.5 rounded-full hover:bg-red-700 hover:shadow-lg hover:shadow-red-200 transition-all duration-300"
+            >
+              Contact Us
+            </a>
+          </div>
+
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              class="text-slate-900 focus:outline-none p-2"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+              aria-label="Toggle navigation menu"
+            >
+              <svg
+                id="menu-icon"
+                class="w-7 h-7"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+              <svg
+                id="close-icon"
+                class="w-7 h-7 hidden"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
       <div
-        class="absolute top-0 right-0 w-64 h-64 bg-brand-red opacity-20 blur-[120px]"
-      ></div>
-      <div class="max-w-7xl mx-auto px-4 relative z-10">
-        <h1 class="text-5xl lg:text-6xl font-extrabold tracking-tighter mb-6">
-          Let's Talk <br />
-          <span class="text-brand-red">Chicken.</span>
-        </h1>
-        <p class="text-slate-400 text-lg max-w-2xl leading-relaxed">
-          Need chicken for your hotel, restaurant, or shop? Looking for office
-          space or a place to stay? We're here to help.
-        </p>
-      </div>
-    </section>
-
-    <section class="py-20 max-w-7xl mx-auto px-4 -mt-16 relative z-20">
-      <div class="grid lg:grid-cols-3 gap-8">
-        <div class="lg:col-span-1 space-y-6">
-          <div
-            class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100"
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl"
+      >
+        <div class="px-4 pt-4 pb-8 space-y-2 font-bold">
+          <a
+            href="/"
+            class="mobile-link block px-4 py-3 text-slate-900 hover:bg-gray-50 rounded-lg"
+            >Home</a
           >
-            <h3 class="text-xl font-bold mb-8">Our Details</h3>
-            <div class="space-y-8">
-              <div class="flex items-start gap-4">
-                <div
-                  class="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center text-brand-red shrink-0"
-                >
-                  <i class="fa-solid fa-location-dot"></i>
-                </div>
-                <div>
-                  <h4
-                    class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-1"
-                  >
-                    Office Location
-                  </h4>
-                  <p class="text-sm font-semibold">
-                    Cyanamo, Kabuga II, Rusororo<br />Gasabo District, Kigali
-                  </p>
-                </div>
-              </div>
-              <div class="flex items-start gap-4">
-                <div
-                  class="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center text-brand-red shrink-0"
-                >
-                  <i class="fa-solid fa-envelope"></i>
-                </div>
-                <div>
-                  <h4
-                    class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-1"
-                  >
-                    Email Inquiry
-                  </h4>
-                  <p class="text-sm font-semibold">info@kacy.rw</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-4">
-                <div
-                  class="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center text-brand-red shrink-0"
-                >
-                  <i class="fa-solid fa-phone"></i>
-                </div>
-                <div>
-                  <h4
-                    class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-1"
-                  >
-                    Direct Line
-                  </h4>
-                  <p class="text-sm font-semibold">+250 788 309 077</p>
-                  <p class="text-sm font-semibold">+250 788 867 296</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="bg-slate-900 p-8 rounded-[2rem] text-white shadow-xl shadow-slate-200"
+          <a
+            href="/about/"
+            class="mobile-link block px-4 py-3 text-slate-600 hover:bg-gray-50 rounded-lg"
+            >About Us</a
           >
-            <h3 class="text-lg font-bold mb-6">Direct Departmental Access</h3>
-            <div class="space-y-4">
-              <a
-                href="https://wa.me/250788309077?text=I%20am%20inquiring%20about%20Bulk%20Poultry%20Supply"
-                class="flex items-center justify-between p-4 bg-white/5 rounded-xl hover:bg-brand-red transition-colors group"
-              >
-                <span class="text-sm font-semibold">Poultry Supply</span>
-                <span class="text-xs opacity-50 group-hover:opacity-100"
-                  >Connect →</span
-                >
-              </a>
-              <a
-                href="https://wa.me/250788309077?text=I%20am%20inquiring%20about%20Wholesale%20Orders"
-                class="flex items-center justify-between p-4 bg-white/5 rounded-xl hover:bg-brand-red transition-colors group"
-              >
-                <span class="text-sm font-semibold">Wholesale Orders</span>
-                <span class="text-xs opacity-50 group-hover:opacity-100"
-                  >Connect →</span
-                >
-              </a>
-              <a
-                href="mailto:info@kacy.rw"
-                class="flex items-center justify-between p-4 bg-white/5 rounded-xl hover:bg-brand-red transition-colors group"
-              >
-                <span class="text-sm font-semibold">General Inquiries</span>
-                <span class="text-xs opacity-50 group-hover:opacity-100"
-                  >Email →</span
-                >
-              </a>
-            </div>
+          <a
+            href="/blog/"
+            class="mobile-link block px-4 py-3 text-slate-600 hover:bg-gray-50 rounded-lg"
+            >Blog</a
+          >
+          <div class="pt-4 px-4">
+            <a
+              href="/contact/"
+              class="mobile-link block text-center bg-[#d72229] text-white py-4 rounded-xl shadow-md"
+              >Get in Touch</a
+            >
           </div>
         </div>
+      </div>
+    </nav>
 
+    <main>
+      <section class="bg-slate-950 py-24 text-white relative overflow-hidden">
         <div
-          class="lg:col-span-2 bg-white p-8 md:p-16 rounded-[2.5rem] shadow-sm border border-slate-100"
-        >
-          <h3 class="text-3xl font-bold mb-4">Send Us a Message</h3>
-          <p class="text-slate-500 mb-10">
-            Drop us a message and we'll get back to you within 2 hours during
-            business days.
+          class="absolute top-0 right-0 w-64 h-64 bg-brand-red opacity-20 blur-[120px]"
+        ></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+          <h1 class="text-5xl lg:text-6xl font-extrabold tracking-tighter mb-6">
+            Order Fresh Chicken in Kigali &mdash;
+            <span class="text-brand-red">Contact KOKOLIKOOO</span>
+          </h1>
+          <p class="text-slate-400 text-lg max-w-2xl leading-relaxed">
+            Need a wholesale chicken supplier for your hotel, restaurant, or
+            shop? Looking for office space or a place to stay? We're here to
+            help.
           </p>
+        </div>
+      </section>
 
-          <form
-            action="https://formspree.io/f/mnjbzylg"
-            method="POST"
-            class="grid md:grid-cols-2 gap-8"
+      <section class="py-20 max-w-7xl mx-auto px-4 -mt-16 relative z-20">
+        <div class="grid lg:grid-cols-3 gap-8">
+          <div class="lg:col-span-1 space-y-6">
+            <div
+              class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100"
+            >
+              <h2 class="text-xl font-bold mb-8">Our Details</h2>
+              <div class="space-y-8">
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center text-brand-red shrink-0"
+                  >
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div>
+                    <h3
+                      class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-1"
+                    >
+                      Office Location
+                    </h3>
+                    <p class="text-sm font-semibold">
+                      Cyanamo, Kabuga II, Rusororo<br />Gasabo District, Kigali
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center text-brand-red shrink-0"
+                  >
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div>
+                    <h3
+                      class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-1"
+                    >
+                      Email Inquiry
+                    </h3>
+                    <p class="text-sm font-semibold">info@kacy.rw</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center text-brand-red shrink-0"
+                  >
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <div>
+                    <h3
+                      class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-1"
+                    >
+                      Direct Line
+                    </h3>
+                    <p class="text-sm font-semibold">+250 788 309 077</p>
+                    <p class="text-sm font-semibold">+250 788 867 296</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-slate-900 p-8 rounded-[2rem] text-white shadow-xl shadow-slate-200"
+            >
+              <h2 class="text-lg font-bold mb-6">Direct Departmental Access</h2>
+              <div class="space-y-4">
+                <a
+                  href="https://wa.me/250788309077?text=I%20am%20inquiring%20about%20Bulk%20Poultry%20Supply"
+                  class="flex items-center justify-between p-4 bg-white/5 rounded-xl hover:bg-brand-red transition-colors group"
+                >
+                  <span class="text-sm font-semibold">Poultry Supply</span>
+                  <span class="text-xs opacity-50 group-hover:opacity-100"
+                    >Connect →</span
+                  >
+                </a>
+                <a
+                  href="https://wa.me/250788309077?text=I%20am%20inquiring%20about%20Wholesale%20Orders"
+                  class="flex items-center justify-between p-4 bg-white/5 rounded-xl hover:bg-brand-red transition-colors group"
+                >
+                  <span class="text-sm font-semibold">Wholesale Orders</span>
+                  <span class="text-xs opacity-50 group-hover:opacity-100"
+                    >Connect →</span
+                  >
+                </a>
+                <a
+                  href="mailto:info@kacy.rw"
+                  class="flex items-center justify-between p-4 bg-white/5 rounded-xl hover:bg-brand-red transition-colors group"
+                >
+                  <span class="text-sm font-semibold">General Inquiries</span>
+                  <span class="text-xs opacity-50 group-hover:opacity-100"
+                    >Email →</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="lg:col-span-2 bg-white p-8 md:p-16 rounded-[2.5rem] shadow-sm border border-slate-100"
           >
-            <div class="space-y-2">
-              <label
-                class="text-xs font-bold uppercase tracking-widest text-slate-400"
-                >Full Name</label
-              >
-              <input
-                type="text"
-                name="name"
-                placeholder="e.g. Jean-Luc Munyaneza"
-                class="w-full bg-slate-50 border border-slate-100 rounded-xl p-4 outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition"
-              />
-            </div>
-            <div class="space-y-2">
-              <label
-                class="text-xs font-bold uppercase tracking-widest text-slate-400"
-                >Email Address</label
-              >
-              <input
-                type="email"
-                name="email"
-                placeholder="name@company.rw"
-                class="w-full bg-slate-50 border border-slate-100 rounded-xl p-4 outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition"
-              />
-            </div>
-            <div class="md:col-span-2 space-y-2">
-              <label
-                class="text-xs font-bold uppercase tracking-widest text-slate-400"
-                >Subject of Interest</label
-              >
-              <select
-                name="Subject"
-                class="w-full bg-slate-50 border border-slate-100 rounded-xl p-4 outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition appearance-none"
-              >
-                <option>New Customer Inquiry</option>
-                <option>Bulk Wholesale Order</option>
-                <option>Regular Weekly Supply Contract</option>
-                <option>Custom Cuts & Processing Request</option>
-                <option>Pricing & Quotation</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div class="md:col-span-2 space-y-2">
-              <label
-                class="text-xs font-bold uppercase tracking-widest text-slate-400"
-                >Your Message</label
-              >
-              <textarea
-                rows="6"
-                placeholder="Describe your requirements in detail..."
-                name="message"
-                class="w-full bg-slate-50 border border-slate-100 rounded-xl p-4 outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition"
-              ></textarea>
-            </div>
-            <div class="md:col-span-2">
-              <button
-                type="submit"
-                class="w-full bg-brand-red text-white py-5 rounded-2xl font-black text-lg shadow-xl shadow-red-900/20 hover:bg-red-700 hover:-translate-y-1 transition-all duration-300"
-              >
-                Send Message
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
+            <h2 class="text-3xl font-bold mb-4">Send Us a Message</h2>
+            <p class="text-slate-500 mb-10">
+              Drop us a message and we'll get back to you within 2 hours during
+              business days.
+            </p>
 
-    <section class="pb-24 px-4">
-      <div class="max-w-7xl mx-auto">
+            <form
+              action="https://formspree.io/f/mnjbzylg"
+              method="POST"
+              class="grid md:grid-cols-2 gap-8"
+            >
+              <div class="space-y-2">
+                <label
+                  for="contact-name"
+                  class="text-xs font-bold uppercase tracking-widest text-slate-400"
+                  >Full Name</label
+                >
+                <input
+                  id="contact-name"
+                  type="text"
+                  name="name"
+                  placeholder="e.g. Jean-Luc Munyaneza"
+                  required
+                  autocomplete="name"
+                  class="w-full bg-slate-50 border border-slate-100 rounded-xl p-4 outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition"
+                />
+              </div>
+              <div class="space-y-2">
+                <label
+                  for="contact-email"
+                  class="text-xs font-bold uppercase tracking-widest text-slate-400"
+                  >Email Address</label
+                >
+                <input
+                  id="contact-email"
+                  type="email"
+                  name="email"
+                  placeholder="name@company.rw"
+                  required
+                  autocomplete="email"
+                  class="w-full bg-slate-50 border border-slate-100 rounded-xl p-4 outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition"
+                />
+              </div>
+              <div class="md:col-span-2 space-y-2">
+                <label
+                  for="contact-subject"
+                  class="text-xs font-bold uppercase tracking-widest text-slate-400"
+                  >Subject of Interest</label
+                >
+                <select
+                  id="contact-subject"
+                  name="Subject"
+                  class="w-full bg-slate-50 border border-slate-100 rounded-xl p-4 outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition appearance-none"
+                >
+                  <option>New Customer Inquiry</option>
+                  <option>Bulk Wholesale Order</option>
+                  <option>Regular Weekly Supply Contract</option>
+                  <option>Custom Cuts & Processing Request</option>
+                  <option>Pricing & Quotation</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="md:col-span-2 space-y-2">
+                <label
+                  for="contact-message"
+                  class="text-xs font-bold uppercase tracking-widest text-slate-400"
+                  >Your Message</label
+                >
+                <textarea
+                  id="contact-message"
+                  rows="6"
+                  placeholder="Describe your requirements in detail..."
+                  name="message"
+                  required
+                  class="w-full bg-slate-50 border border-slate-100 rounded-xl p-4 outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition"
+                ></textarea>
+              </div>
+              <div class="md:col-span-2">
+                <button
+                  type="submit"
+                  class="w-full bg-brand-red text-white py-5 rounded-2xl font-black text-lg shadow-xl shadow-red-900/20 hover:bg-red-700 hover:-translate-y-1 transition-all duration-300"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="pb-24 px-4">
+        <div class="max-w-7xl mx-auto">
+          <div
+            class="overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000 border-8 border-white shadow-2xl h-[500px]"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d322.0981508248965!2d30.227316052021383!3d-1.961479626204031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca7cdea479709%3A0x83bd81ea90dfb8c3!2sKOKOLIKOOO%20-%20KACY%20FARMS!5e1!3m2!1sen!2srw!4v1781862325055!5m2!1sen!2srw"
+              title="Map showing the location of KOKOLIKOOO by Kacy Farms in Rusororo, Kigali"
+              style="border: 0; width: 100%; height: 450px"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-slate-950 text-gray-400 py-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          class="overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000 border-8 border-white shadow-2xl h-[500px]"
+          class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-slate-800 pb-12 mb-12 gap-8"
         >
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d322.0981508248965!2d30.227316052021383!3d-1.961479626204031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca7cdea479709%3A0x83bd81ea90dfb8c3!2sKOKOLIKOOO%20-%20KACY%20FARMS!5e1!3m2!1sen!2srw!4v1781862325055!5m2!1sen!2srw"
-            style="border: 0; width: 100%; height: 450px"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+          <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
+            <a href="/">
+              <img
+                src="/assets/images/kokolikooo-logo.webp"
+                alt="KOKOLIKOOO - Rwanda's Premier Poultry Brand"
+                width="1527"
+                height="1064"
+                loading="lazy"
+                class="h-16 w-auto object-contain"
+              />
+            </a>
+            <p class="text-sm max-w-xs leading-relaxed">
+              Kigali's trusted poultry brand. Fresh chicken delivered to hotels,
+              supermarkets, and restaurants across the city.
+            </p>
+          </div>
+
+          <nav
+            aria-label="Footer navigation"
+            class="flex flex-wrap gap-x-8 gap-y-4 text-sm font-semibold uppercase tracking-widest text-gray-300"
+          >
+            <a href="/" class="hover:text-[#d72229] transition">Home</a>
+            <a href="/about/" class="hover:text-[#d72229] transition">About</a>
+            <a href="/blog/" class="hover:text-[#d72229] transition">Blog</a>
+            <a href="/contact/" class="hover:text-[#d72229] transition">Contact</a>
+          </nav>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-between gap-8 items-start">
+          <div itemscope itemtype="https://schema.org/LocalBusiness" class="space-y-2 text-sm">
+            <meta itemprop="name" content="KOKOLIKOOO by Kacy Farms" />
+            <meta itemprop="telephone" content="+250788309077" />
+            <meta itemprop="email" content="info@kacy.rw" />
+            <p class="text-gray-300 font-bold uppercase tracking-wider mb-3">
+              Headquarters
+            </p>
+            <p
+              itemprop="address"
+              itemscope
+              itemtype="https://schema.org/PostalAddress"
+              class="flex items-center gap-2"
+            >
+              <span class="font-bold">Location:</span>
+              <span
+                ><span itemprop="streetAddress">Cyanamo, Kabuga II, Rusororo</span>,
+                <span itemprop="addressLocality">Kigali</span></span
+              >
+            </p>
+            <p class="flex items-center gap-2">
+              <span class="font-bold">Phone:</span>
+              <a href="tel:+250788309077" class="hover:text-white transition">+250 788 309 077</a> |
+              <a href="tel:+250788867296" class="hover:text-white transition">+250 788 867 296</a>
+            </p>
+            <p class="flex items-center gap-2">
+              <span class="font-bold">Email:</span>
+              <a href="mailto:info@kacy.rw" class="hover:text-white transition">info@kacy.rw</a>
+            </p>
+          </div>
+
+          <div class="flex flex-col md:items-end">
+            <div class="flex gap-4 mb-4">
+              <a
+                href="https://www.facebook.com/kacyfarms"
+                target="_blank"
+                rel="noopener"
+                class="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center hover:bg-[#d72229] hover:text-white transition"
+              >
+                <span class="sr-only">Facebook</span>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/kacyfarms"
+                target="_blank"
+                rel="noopener"
+                class="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center hover:bg-[#d72229] hover:text-white transition"
+              >
+                <span class="sr-only">Instagram</span>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://twitter.com/KacyFarms"
+                target="_blank"
+                rel="noopener"
+                class="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center hover:bg-[#d72229] hover:text-white transition"
+              >
+                <span class="sr-only">X (Twitter)</span>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <p class="text-xs tracking-widest uppercase opacity-50 font-bold">
+              &copy; 2026 KOKOLIKOOO by Kacy Farms. All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
-    </section>
-
-    <div id="footer-placeholder"></div>
+    </footer>
   </body>
 </html>

@@ -8,54 +8,79 @@
       name="description"
       content="Learn about KOKOLIKOOO by Kacy Farms — fresh chicken delivered to Kigali hotels and supermarkets. 150 tons per year, always chilled, since 2024."
     />
-    <meta
-      name="keywords"
-      content="KOKOLIKOOO, KOKOLIKOOO Rwanda, KOKOLIKOOO chicken, Kacy Farms about, poultry farming Rwanda, chicken supplier Kigali, industrial poultry Rwanda, broiler production Rwanda"
-    />
     <meta name="author" content="Kacy Farms" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#d72229" />
     <link rel="canonical" href="https://kacy.rw/about/" />
-    <link rel="alternate" hreflang="en" href="https://kacy.rw/about/" />
-    <link rel="alternate" hreflang="rw" href="https://kacy.rw/about/" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="/assets/fonts/google-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://kit.fontawesome.com" />
-    <link rel="dns-prefetch" href="https://images.unsplash.com" />
+
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <link rel="stylesheet" href="/css/tailwind.css" />
+    <link rel="stylesheet" href="/css/style.css" />
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "AboutPage",
-        "mainEntity": {
-          "@type": "AgriculturalBusiness",
-          "name": "Kacy Farms",
-          "alternateName": "KOKOLIKOOO",
-          "url": "https://kacy.rw/",
-          "logo": "https://kacy.rw/assets/images/kokolikooo.jpeg",
-          "foundingDate": "2024",
-          "description": "Kacy Farms produces 150 tons of fresh chicken every year for Kigali hotels, supermarkets, and restaurants. Always chilled, always on time.",
-          "telephone": ["+250788309077", "+250788867296"],
-          "email": "info@kacy.rw",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Cyanamo, Kabuga II, Rusororo",
-            "addressLocality": "Gasabo, Kigali",
-            "addressCountry": "RW"
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://kacy.rw/#organization",
+            "name": "Kacy Farms",
+            "alternateName": "KOKOLIKOOO",
+            "url": "https://kacy.rw/",
+            "logo": {
+              "@type": "ImageObject",
+              "@id": "https://kacy.rw/assets/images/kokolikooo-logo.webp",
+              "url": "https://kacy.rw/assets/images/kokolikooo-logo.webp",
+              "width": 1527,
+              "height": 1064
+            },
+            "foundingDate": "2024",
+            "description": "Kacy Farms produces 150 tons of fresh chicken every year for Kigali hotels, supermarkets, and restaurants under the KOKOLIKOOO brand. Always chilled, always on time.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Cyanamo, Kabuga II, Rusororo",
+              "addressLocality": "Kigali",
+              "addressRegion": "Gasabo",
+              "addressCountry": "RW"
+            },
+            "sameAs": [
+              "https://www.facebook.com/kacyfarms",
+              "https://www.instagram.com/kacyfarms",
+              "https://twitter.com/KacyFarms"
+            ]
           },
-          "sameAs": [
-            "https://www.facebook.com/kacyfarms",
-            "https://www.instagram.com/kacyfarms"
-          ]
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kacy.rw/" },
-          { "@type": "ListItem", "position": 2, "name": "About", "item": "https://kacy.rw/about/" }
+          {
+            "@type": "WebPage",
+            "@id": "https://kacy.rw/about/#webpage",
+            "url": "https://kacy.rw/about/",
+            "name": "About KOKOLIKOOO — Rwanda's Premier Poultry Brand",
+            "description": "Learn about KOKOLIKOOO by Kacy Farms — fresh chicken delivered to Kigali hotels and supermarkets. 150 tons per year, always chilled, since 2024.",
+            "isPartOf": { "@id": "https://kacy.rw/#website" },
+            "about": { "@id": "https://kacy.rw/#organization" },
+            "inLanguage": "en"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://kacy.rw/about/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://kacy.rw/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "About",
+                "item": "https://kacy.rw/about/"
+              }
+            ]
+          }
         ]
       }
     </script>
@@ -70,12 +95,15 @@
       property="og:description"
       content="Discover KOKOLIKOOO by Kacy Farms — fresh chicken for Kigali hotels and supermarkets. Delivered chilled, always on time."
     />
+    <meta property="og:image" content="https://kacy.rw/assets/images/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta
-      property="og:image"
-      content="https://kacy.rw/assets/images/kokolikooo.jpeg"
+      property="og:image:alt"
+      content="KOKOLIKOOO by Kacy Farms — fresh chicken supplier in Kigali, Rwanda"
     />
     <meta property="og:locale" content="en_RW" />
-    <meta property="og:site_name" content="KOKOLIKOOO - Kacy Farms" />
+    <meta property="og:site_name" content="KOKOLIKOOO by Kacy Farms" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@KacyFarms" />
@@ -87,19 +115,18 @@
       name="twitter:description"
       content="Fresh chicken for Kigali hotels and supermarkets. Delivered chilled, always on time. 150 tons per year."
     />
+    <meta name="twitter:image" content="https://kacy.rw/assets/images/og-image.jpg" />
     <meta
-      name="twitter:image"
-      content="https://kacy.rw/assets/images/kokolikooo.jpeg"
+      name="twitter:image:alt"
+      content="KOKOLIKOOO by Kacy Farms — fresh chicken supplier in Kigali, Rwanda"
     />
 
-    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
-    <link rel="stylesheet" href="../css/tailwind.css" />
-    <link rel="stylesheet" href="../css/style.css" />
     <script
+      defer
       src="https://kit.fontawesome.com/5f3cf1873e.js"
       crossorigin="anonymous"
     ></script>
-    <script src="../js/main.js" type="module"></script>
+    <script src="/js/main.js" type="module"></script>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-81TW40GY2X"
@@ -115,335 +142,511 @@
     </script>
   </head>
   <body class="bg-white text-slate-900">
-    <div id="navbar-placeholder"></div>
+    <nav
+      class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-[100] border-b border-gray-100"
+      aria-label="Main navigation"
+    >
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+          <a
+            href="/"
+            class="flex items-center group"
+            aria-label="KOKOLIKOOO by Kacy Farms — Home"
+          >
+            <img
+              src="/assets/images/kokolikooo-logo.webp"
+              alt="KOKOLIKOOO by Kacy Farms logo"
+              width="1527"
+              height="1064"
+              class="h-12 sm:h-16 w-auto object-contain max-w-[150px] sm:max-w-none"
+            />
+          </a>
 
-    <section class="relative py-32 bg-slate-950 text-white overflow-hidden">
+          <div
+            class="hidden md:flex space-x-8 font-semibold items-center text-sm uppercase tracking-wide"
+          >
+            <a
+              href="/"
+              class="text-slate-900 hover:text-[#d72229] transition-colors"
+              >Home</a
+            >
+            <a
+              href="/about/"
+              class="text-slate-600 hover:text-[#d72229] transition-colors"
+              >About</a
+            >
+            <a
+              href="/blog/"
+              class="text-slate-600 hover:text-[#d72229] transition-colors"
+              >Blog</a
+            >
+            <a
+              href="/contact/"
+              class="bg-[#d72229] text-white px-6 py-2.5 rounded-full hover:bg-red-700 hover:shadow-lg hover:shadow-red-200 transition-all duration-300"
+            >
+              Contact Us
+            </a>
+          </div>
+
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              class="text-slate-900 focus:outline-none p-2"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+              aria-label="Toggle navigation menu"
+            >
+              <svg
+                id="menu-icon"
+                class="w-7 h-7"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+              <svg
+                id="close-icon"
+                class="w-7 h-7 hidden"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
       <div
-        class="absolute top-0 right-0 w-1/2 h-full bg-brand-red opacity-10 skew-x-12 translate-x-32"
-      ></div>
-      <div class="max-w-7xl mx-auto px-4 relative z-10">
-        <div class="max-w-3xl">
-          <div class="flex items-center gap-4 mb-6">
-            <span class="h-[2px] w-12 bg-brand-red"></span>
-            <span
-              class="text-brand-red font-bold tracking-widest uppercase text-xs"
-              >Est. 2024 | Gasabo, Rwanda</span
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl"
+      >
+        <div class="px-4 pt-4 pb-8 space-y-2 font-bold">
+          <a
+            href="/"
+            class="mobile-link block px-4 py-3 text-slate-900 hover:bg-gray-50 rounded-lg"
+            >Home</a
+          >
+          <a
+            href="/about/"
+            class="mobile-link block px-4 py-3 text-slate-600 hover:bg-gray-50 rounded-lg"
+            >About Us</a
+          >
+          <a
+            href="/blog/"
+            class="mobile-link block px-4 py-3 text-slate-600 hover:bg-gray-50 rounded-lg"
+            >Blog</a
+          >
+          <div class="pt-4 px-4">
+            <a
+              href="/contact/"
+              class="mobile-link block text-center bg-[#d72229] text-white py-4 rounded-xl shadow-md"
+              >Get in Touch</a
             >
           </div>
-          <h1
-            class="text-6xl lg:text-8xl font-black mb-8 leading-[0.9] tracking-tighter"
-          >
-            Serving <br /><span class="text-brand-red">Rwanda.</span>
-          </h1>
-          <p class="text-xl text-slate-400 leading-relaxed max-w-2xl">
-            Kacy Ltd runs three businesses: Kacy Farms under the brand
-            KOKOLIKOOO, Kacy Motel for hospitality, and commercial real estate.
-          </p>
         </div>
       </div>
-    </section>
+    </nav>
 
-    <section class="py-24 max-w-7xl mx-auto px-4">
-      <div class="grid md:grid-cols-2 gap-12">
-        <div class="p-12 rounded-[3rem] bg-slate-50 border border-slate-100">
-          <i class="fa-solid fa-eye text-brand-red text-3xl mb-6"></i>
-          <h3 class="text-3xl font-black mb-4 uppercase">Our Vision</h3>
-          <p class="text-slate-600 leading-relaxed text-lg">
-            To become a leading supplier of premium poultry products in Rwanda and regional, recognized for quality, sustainability, customer satisfaction and empowering women and youth in agribusiness.
-          </p>
-        </div>
+    <main>
+      <section class="relative py-32 bg-slate-950 text-white overflow-hidden">
         <div
-          class="p-12 rounded-[3rem] bg-slate-900 text-white shadow-2xl shadow-slate-200"
-        >
-          <i class="fa-solid fa-bullseye text-brand-red text-3xl mb-6"></i>
-          <h3 class="text-3xl font-black mb-4 uppercase">Our Mission</h3>
-          <p class="text-slate-400 leading-relaxed text-lg">
-            To deliver high-quality, fresh, and sustainably raised poultry meat through ethical, innovative, and inclusive farming practices that contribute to food security, customer satisfaction, and local economic development.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-24 bg-white border-y border-slate-100">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="mb-16">
-          <h2 class="text-4xl font-black uppercase tracking-tighter">
-            Our Business Units
-          </h2>
-          <p class="text-slate-500 mt-2 font-bold">
-            Poultry, Hospitality & Real Estate
-          </p>
-        </div>
-
-        <div class="grid lg:grid-cols-3 gap-8">
-          <div
-            class="relative group overflow-hidden rounded-[2.5rem] h-[500px]"
-          >
-            <img
-              src="../assets/images/chicken.avif"
-              class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700"
-              alt="Kacy Farms industrial poultry production"
-              loading="lazy"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"
-            ></div>
-            <div class="absolute bottom-10 left-10 right-10">
-              <i class="fa-solid fa-tractor text-brand-red text-3xl mb-4"></i>
-              <h4 class="text-3xl font-bold text-white mb-2">
-                Kacy Farms (KOKOLIKOOO)
-              </h4>
-              <p class="text-slate-300 text-sm">
-                Raising and delivering quality chicken to Kigali's best
-                kitchens. Target: 150 tons per year.
-              </p>
+          class="absolute top-0 right-0 w-1/2 h-full bg-brand-red opacity-10 skew-x-12 translate-x-32"
+        ></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+          <div class="max-w-3xl">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="h-[2px] w-12 bg-brand-red"></span>
+              <span
+                class="text-brand-red font-bold tracking-widest uppercase text-xs"
+                >Est. 2024 | Gasabo, Rwanda</span
+              >
             </div>
-          </div>
-
-          <div
-            class="relative group overflow-hidden rounded-[2.5rem] h-[500px]"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800"
-              class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700"
-              alt="Kacy Motel executive hospitality accommodation"
-              loading="lazy"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"
-            ></div>
-            <div class="absolute bottom-10 left-10 right-10">
-              <i class="fa-solid fa-bed text-brand-red text-3xl mb-4"></i>
-              <h4 class="text-3xl font-bold text-white mb-2">Motel</h4>
-              <p class="text-slate-300 text-sm">
-                Comfortable stays for business travelers in the heart of
-                Rusororo.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="relative group overflow-hidden rounded-[2.5rem] h-[500px]"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800"
-              class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700"
-              alt="Kacy Farms commercial real estate properties"
-              loading="lazy"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"
-            ></div>
-            <div class="absolute bottom-10 left-10 right-10">
-              <i
-                class="fa-solid fa-building-circle-check text-brand-red text-3xl mb-4"
-              ></i>
-              <h4 class="text-3xl font-bold text-white mb-2">Real Estate</h4>
-              <p class="text-slate-300 text-sm">
-                Modern office and shop spaces available for rent in Gasabo.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-24 max-w-7xl mx-auto px-4">
-      <div class="grid lg:grid-cols-3 gap-12">
-        <div>
-          <h2 class="text-5xl font-black text-slate-900 leading-[1.1] mb-6">
-            How We <br /><span class="text-brand-red">Work.</span>
-          </h2>
-          <p class="text-slate-500">
-            Every business we run is built on the same four principles. Here's
-            what drives us.
-          </p>
-        </div>
-        <div class="lg:col-span-2 grid md:grid-cols-2 gap-8">
-          <div class="p-8 border-l-4 border-brand-red bg-slate-50">
-            <!-- <i class="fa-solid fa-microchip text-slate-900 mb-4 text-xl"></i> -->
-            <h5 class="font-bold text-xl mb-2">Smart Farming</h5>
-            <p class="text-sm text-slate-500 leading-relaxed">
-              We use modern equipment to raise healthier chickens more
-              efficiently. Cleaner facilities mean better quality.
+            <h1
+              class="text-6xl lg:text-8xl font-black mb-8 leading-[0.9] tracking-tighter"
+            >
+              Serving <br /><span class="text-brand-red">Rwanda.</span>
+            </h1>
+            <p class="text-xl text-slate-400 leading-relaxed max-w-2xl">
+              Kacy Ltd runs three businesses: Kacy Farms under the brand
+              KOKOLIKOOO, Kacy Motel for hospitality, and commercial real estate.
             </p>
           </div>
-          <div class="p-8 border-l-4 border-brand-red bg-slate-50">
-            <!--<i 
-              class="fa-solid fa-shield-halved text-slate-900 mb-4 text-xl"
-            ></i>-->
-            <h5 class="font-bold text-xl mb-2">Safety First</h5>
-            <p class="text-sm text-slate-500 leading-relaxed">
-              We meet Rwanda's highest food safety standards so you can serve
-              with confidence. No shortcuts.
+        </div>
+      </section>
+
+      <section class="py-24 max-w-7xl mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12">
+          <div class="p-12 rounded-[3rem] bg-slate-50 border border-slate-100">
+            <i class="fa-solid fa-eye text-brand-red text-3xl mb-6"></i>
+            <h3 class="text-3xl font-black mb-4 uppercase">Our Vision</h3>
+            <p class="text-slate-600 leading-relaxed text-lg">
+              To become a leading supplier of premium poultry products in Rwanda and regional, recognized for quality, sustainability, customer satisfaction and empowering women and youth in agribusiness.
             </p>
           </div>
-          <div class="relative overflow-hidden p-8 border-l-4 border-brand-red bg-slate-50">
-            <img
-              src="../assets/images/car 2.jpeg"
-              class="absolute inset-0 w-full h-full object-cover opacity-10"
-              alt="Kacy Farms refrigerated delivery truck"
-              loading="lazy"
-            />
-            <div class="relative z-10">
-              <h5 class="font-bold text-xl mb-2">Direct Delivery</h5>
+          <div
+            class="p-12 rounded-[3rem] bg-slate-900 text-white shadow-2xl shadow-slate-200"
+          >
+            <i class="fa-solid fa-bullseye text-brand-red text-3xl mb-6"></i>
+            <h3 class="text-3xl font-black mb-4 uppercase">Our Mission</h3>
+            <p class="text-slate-400 leading-relaxed text-lg">
+              To deliver high-quality, fresh, and sustainably raised poultry meat through ethical, innovative, and inclusive farming practices that contribute to food security, customer satisfaction, and local economic development.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-24 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="mb-16">
+            <h2 class="text-4xl font-black uppercase tracking-tighter">
+              Our Business Units
+            </h2>
+            <p class="text-slate-500 mt-2 font-bold">
+              Poultry, Hospitality & Real Estate
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-3 gap-8">
+            <div
+              class="relative group overflow-hidden rounded-[2.5rem] h-[500px]"
+            >
+              <img
+                src="/assets/images/chicken.avif"
+                width="1200"
+                height="630"
+                class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                alt="Kacy Farms industrial poultry production"
+                loading="lazy"
+                decoding="async"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"
+              ></div>
+              <div class="absolute bottom-10 left-10 right-10">
+                <i class="fa-solid fa-tractor text-brand-red text-3xl mb-4"></i>
+                <h3 class="text-3xl font-bold text-white mb-2">
+                  Kacy Farms (KOKOLIKOOO)
+                </h3>
+                <p class="text-slate-300 text-sm">
+                  Raising and delivering quality chicken to Kigali's best
+                  kitchens. Target: 150 tons per year.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="relative group overflow-hidden rounded-[2.5rem] h-[500px]"
+            >
+              <img
+                src="/assets/images/kacy-motel.webp"
+                width="1200"
+                height="800"
+                class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                alt="Kacy Motel executive hospitality accommodation in Rusororo, Kigali"
+                loading="lazy"
+                decoding="async"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"
+              ></div>
+              <div class="absolute bottom-10 left-10 right-10">
+                <i class="fa-solid fa-bed text-brand-red text-3xl mb-4"></i>
+                <h3 class="text-3xl font-bold text-white mb-2">Motel</h3>
+                <p class="text-slate-300 text-sm">
+                  Comfortable stays for business travelers in the heart of
+                  Rusororo.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="relative group overflow-hidden rounded-[2.5rem] h-[500px]"
+            >
+              <img
+                src="/assets/images/real-estate.webp"
+                width="1200"
+                height="800"
+                class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                alt="Kacy commercial real estate office and shop spaces in Gasabo, Kigali"
+                loading="lazy"
+                decoding="async"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"
+              ></div>
+              <div class="absolute bottom-10 left-10 right-10">
+                <i
+                  class="fa-solid fa-building-circle-check text-brand-red text-3xl mb-4"
+                ></i>
+                <h3 class="text-3xl font-bold text-white mb-2">Real Estate</h3>
+                <p class="text-slate-300 text-sm">
+                  Modern office and shop spaces available for rent in Gasabo.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-24 max-w-7xl mx-auto px-4">
+        <div class="grid lg:grid-cols-3 gap-12">
+          <div>
+            <h2 class="text-5xl font-black text-slate-900 leading-[1.1] mb-6">
+              How We <br /><span class="text-brand-red">Work.</span>
+            </h2>
+            <p class="text-slate-500">
+              Every business we run is built on the same four principles. Here's
+              what drives us.
+            </p>
+          </div>
+          <div class="lg:col-span-2 grid md:grid-cols-2 gap-8">
+            <div class="p-8 border-l-4 border-brand-red bg-slate-50">
+              <h3 class="font-bold text-xl mb-2">Smart Farming</h3>
               <p class="text-sm text-slate-500 leading-relaxed">
-                From our farm to your kitchen. No middlemen, no delays, just fresh
-                chicken.
+                We use modern equipment to raise healthier chickens more
+                efficiently. Cleaner facilities mean better quality.
+              </p>
+            </div>
+            <div class="p-8 border-l-4 border-brand-red bg-slate-50">
+              <h3 class="font-bold text-xl mb-2">Safety First</h3>
+              <p class="text-sm text-slate-500 leading-relaxed">
+                We meet Rwanda's highest food safety standards so you can serve
+                with confidence. No shortcuts.
+              </p>
+            </div>
+            <div class="relative overflow-hidden p-8 border-l-4 border-brand-red bg-slate-50">
+              <img
+                src="/assets/images/delivery-truck-2.webp"
+                width="1280"
+                height="960"
+                class="absolute inset-0 w-full h-full object-cover opacity-10"
+                alt="Kacy Farms refrigerated delivery truck"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="relative z-10">
+                <h3 class="font-bold text-xl mb-2">Direct Delivery</h3>
+                <p class="text-sm text-slate-500 leading-relaxed">
+                  From our farm to your kitchen. No middlemen, no delays, just fresh
+                  chicken.
+                </p>
+              </div>
+            </div>
+            <div class="p-8 border-l-4 border-brand-red bg-slate-50">
+              <h3 class="font-bold text-xl mb-2">Growing With You</h3>
+              <p class="text-sm text-slate-500 leading-relaxed">
+                We're scaling from 6,000 to 20,000 birds to keep up with Kigali's
+                growing appetite for quality chicken.
               </p>
             </div>
           </div>
-          <div class="p-8 border-l-4 border-brand-red bg-slate-50">
-            <!-- <i
-              class="fa-solid fa-up-right-and-down-left-from-center text-slate-900 mb-4 text-xl"
-            ></i> -->
-            <h5 class="font-bold text-xl mb-2">Growing With You</h5>
-            <p class="text-sm text-slate-500 leading-relaxed">
-              We're scaling from 6,000 to 20,000 birds to keep up with Kigali's
-              growing appetite for quality chicken.
+        </div>
+      </section>
+
+      <section class="py-24 bg-slate-950 text-white rounded-[4rem] mx-4 mb-24">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-black uppercase tracking-tighter">
+              Contact Us
+            </h2>
+            <p class="text-slate-400 mt-4">
+              Direct lines for bulk procurement and business inquiries.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <div
+              class="p-10 bg-white/5 border border-white/10 rounded-[3rem] text-center hover:bg-brand-red transition-all group"
+            >
+              <div
+                class="w-20 h-20 bg-slate-900 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-brand-red"
+              >
+                <i class="fa-solid fa-phone text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-bold">Phone Line 1</h3>
+              <p
+                class="text-xs font-black text-brand-red group-hover:text-white uppercase tracking-[0.2em] mb-6"
+              >
+                Operations
+              </p>
+              <a
+                href="tel:+250788309077"
+                class="inline-block px-6 py-2 border border-white/20 rounded-full text-xs font-bold hover:bg-white hover:text-slate-950 transition"
+                >+250 788 309 077</a
+              >
+            </div>
+            <div
+              class="p-10 bg-white/5 border border-white/10 rounded-[3rem] text-center hover:bg-brand-red transition-all group"
+            >
+              <div
+                class="w-20 h-20 bg-slate-900 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-brand-red"
+              >
+                <i class="fa-solid fa-whatsapp text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-bold">Phone Line 2</h3>
+              <p
+                class="text-xs font-black text-brand-red group-hover:text-white uppercase tracking-[0.2em] mb-6"
+              >
+                Sales & Logistics
+              </p>
+              <a
+                href="https://wa.me/250788867296"
+                class="inline-block px-6 py-2 border border-white/20 rounded-full text-xs font-bold hover:bg-white hover:text-slate-950 transition"
+                >+250 788 867 296</a
+              >
+            </div>
+            <div
+              class="p-10 bg-white/5 border border-white/10 rounded-[3rem] text-center hover:bg-brand-red transition-all group"
+            >
+              <div
+                class="w-20 h-20 bg-slate-900 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-brand-red"
+              >
+                <i class="fa-solid fa-envelope text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-bold">Email</h3>
+              <p
+                class="text-xs font-black text-brand-red group-hover:text-white uppercase tracking-[0.2em] mb-6"
+              >
+                General Inquiries
+              </p>
+              <a
+                href="mailto:info@kacy.rw"
+                class="inline-block px-6 py-2 border border-white/20 rounded-full text-xs font-bold hover:bg-white hover:text-slate-950 transition"
+                >info@kacy.rw</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-slate-950 text-gray-400 py-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-slate-800 pb-12 mb-12 gap-8"
+        >
+          <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
+            <a href="/">
+              <img
+                src="/assets/images/kokolikooo-logo.webp"
+                alt="KOKOLIKOOO - Rwanda's Premier Poultry Brand"
+                width="1527"
+                height="1064"
+                loading="lazy"
+                class="h-16 w-auto object-contain"
+              />
+            </a>
+            <p class="text-sm max-w-xs leading-relaxed">
+              Kigali's trusted poultry brand. Fresh chicken delivered to hotels,
+              supermarkets, and restaurants across the city.
+            </p>
+          </div>
+
+          <nav
+            aria-label="Footer navigation"
+            class="flex flex-wrap gap-x-8 gap-y-4 text-sm font-semibold uppercase tracking-widest text-gray-300"
+          >
+            <a href="/" class="hover:text-[#d72229] transition">Home</a>
+            <a href="/about/" class="hover:text-[#d72229] transition">About</a>
+            <a href="/blog/" class="hover:text-[#d72229] transition">Blog</a>
+            <a href="/contact/" class="hover:text-[#d72229] transition">Contact</a>
+          </nav>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-between gap-8 items-start">
+          <div itemscope itemtype="https://schema.org/LocalBusiness" class="space-y-2 text-sm">
+            <meta itemprop="name" content="KOKOLIKOOO by Kacy Farms" />
+            <meta itemprop="telephone" content="+250788309077" />
+            <meta itemprop="email" content="info@kacy.rw" />
+            <p class="text-gray-300 font-bold uppercase tracking-wider mb-3">
+              Headquarters
+            </p>
+            <p
+              itemprop="address"
+              itemscope
+              itemtype="https://schema.org/PostalAddress"
+              class="flex items-center gap-2"
+            >
+              <span class="font-bold">Location:</span>
+              <span
+                ><span itemprop="streetAddress">Cyanamo, Kabuga II, Rusororo</span>,
+                <span itemprop="addressLocality">Kigali</span></span
+              >
+            </p>
+            <p class="flex items-center gap-2">
+              <span class="font-bold">Phone:</span>
+              <a href="tel:+250788309077" class="hover:text-white transition">+250 788 309 077</a> |
+              <a href="tel:+250788867296" class="hover:text-white transition">+250 788 867 296</a>
+            </p>
+            <p class="flex items-center gap-2">
+              <span class="font-bold">Email:</span>
+              <a href="mailto:info@kacy.rw" class="hover:text-white transition">info@kacy.rw</a>
+            </p>
+          </div>
+
+          <div class="flex flex-col md:items-end">
+            <div class="flex gap-4 mb-4">
+              <a
+                href="https://www.facebook.com/kacyfarms"
+                target="_blank"
+                rel="noopener"
+                class="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center hover:bg-[#d72229] hover:text-white transition"
+              >
+                <span class="sr-only">Facebook</span>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/kacyfarms"
+                target="_blank"
+                rel="noopener"
+                class="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center hover:bg-[#d72229] hover:text-white transition"
+              >
+                <span class="sr-only">Instagram</span>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://twitter.com/KacyFarms"
+                target="_blank"
+                rel="noopener"
+                class="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center hover:bg-[#d72229] hover:text-white transition"
+              >
+                <span class="sr-only">X (Twitter)</span>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <p class="text-xs tracking-widest uppercase opacity-50 font-bold">
+              &copy; 2026 KOKOLIKOOO by Kacy Farms. All rights reserved.
             </p>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- <section class="py-24 bg-white border-b border-slate-100">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-16">
-          <span
-            class="text-brand-red font-bold tracking-widest text-xs uppercase"
-            >Leadership</span
-          >
-          <h2
-            class="text-4xl lg:text-5xl font-black uppercase tracking-tighter mt-2"
-          >
-            Meet the <span class="text-brand-red">Team</span>
-          </h2>
-          <p class="text-slate-500 mt-4 max-w-xl mx-auto">
-            Experienced professionals driving Kacy Ltd's vision across poultry,
-            hospitality, and real estate.
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="text-center p-8 rounded-[2rem] bg-slate-50 border border-slate-100">
-            <div class="w-24 h-24 rounded-full bg-slate-200 mx-auto mb-6 flex items-center justify-center text-slate-500">
-              <i class="fa-solid fa-user text-3xl"></i>
-            </div>
-            <h4 class="font-bold text-xl">Patrick Habimana</h4>
-            <p class="text-brand-red font-bold text-xs uppercase tracking-widest mt-1 mb-4">
-              Managing Director
-            </p>
-            <p class="text-slate-500 text-sm leading-relaxed">
-              Patrick leads Kacy Ltd with over 15 years of experience in agribusiness across East Africa.
-            </p>
-          </div>
-
-          <div class="text-center p-8 rounded-[2rem] bg-slate-50 border border-slate-100">
-            <div class="w-24 h-24 rounded-full bg-slate-200 mx-auto mb-6 flex items-center justify-center text-slate-500">
-              <i class="fa-solid fa-user text-3xl"></i>
-            </div>
-            <h4 class="font-bold text-xl">Diane Uwimana</h4>
-            <p class="text-brand-red font-bold text-xs uppercase tracking-widest mt-1 mb-4">
-              Operations Director
-            </p>
-            <p class="text-slate-500 text-sm leading-relaxed">
-              Diane makes sure every bird is processed safely and delivered fresh, every time.
-            </p>
-          </div>
-
-          <div class="text-center p-8 rounded-[2rem] bg-slate-50 border border-slate-100">
-            <div class="w-24 h-24 rounded-full bg-slate-200 mx-auto mb-6 flex items-center justify-center text-slate-500">
-              <i class="fa-solid fa-user text-3xl"></i>
-            </div>
-            <h4 class="font-bold text-xl">Emmanuel Rusine</h4>
-            <p class="text-brand-red font-bold text-xs uppercase tracking-widest mt-1 mb-4">
-              Commercial Director
-            </p>
-            <p class="text-slate-500 text-sm leading-relaxed">
-              Emmanuel helps hotels, supermarkets, and restaurants get the chicken they need, when they need it.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <section class="py-24 bg-slate-950 text-white rounded-[4rem] mx-4 mb-24">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-black uppercase tracking-tighter">
-            Contact Us
-          </h2>
-          <p class="text-slate-400 mt-4">
-            Direct lines for bulk procurement and business inquiries.
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-          <div
-            class="p-10 bg-white/5 border border-white/10 rounded-[3rem] text-center hover:bg-brand-red transition-all group"
-          >
-            <div
-              class="w-20 h-20 bg-slate-900 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-brand-red"
-            >
-              <i class="fa-solid fa-phone text-2xl"></i>
-            </div>
-            <h4 class="text-xl font-bold">Phone Line 1</h4>
-            <p
-              class="text-xs font-black text-brand-red group-hover:text-white uppercase tracking-[0.2em] mb-6"
-            >
-              Operations
-            </p>
-            <a
-              href="tel:+250788309077"
-              class="inline-block px-6 py-2 border border-white/20 rounded-full text-xs font-bold hover:bg-white hover:text-slate-950 transition"
-              >+250 788 309 077</a
-            >
-          </div>
-          <div
-            class="p-10 bg-white/5 border border-white/10 rounded-[3rem] text-center hover:bg-brand-red transition-all group"
-          >
-            <div
-              class="w-20 h-20 bg-slate-900 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-brand-red"
-            >
-              <i class="fa-solid fa-whatsapp text-2xl"></i>
-            </div>
-            <h4 class="text-xl font-bold">Phone Line 2</h4>
-            <p
-              class="text-xs font-black text-brand-red group-hover:text-white uppercase tracking-[0.2em] mb-6"
-            >
-              Sales & Logistics
-            </p>
-            <a
-              href="https://wa.me/250788867296"
-              class="inline-block px-6 py-2 border border-white/20 rounded-full text-xs font-bold hover:bg-white hover:text-slate-950 transition"
-              >+250 788 867 296</a
-            >
-          </div>
-          <div
-            class="p-10 bg-white/5 border border-white/10 rounded-[3rem] text-center hover:bg-brand-red transition-all group"
-          >
-            <div
-              class="w-20 h-20 bg-slate-900 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-brand-red"
-            >
-              <i class="fa-solid fa-envelope text-2xl"></i>
-            </div>
-            <h4 class="text-xl font-bold">Email</h4>
-            <p
-              class="text-xs font-black text-brand-red group-hover:text-white uppercase tracking-[0.2em] mb-6"
-            >
-              General Inquiries
-            </p>
-            <a
-              href="mailto:info@kacy.rw"
-              class="inline-block px-6 py-2 border border-white/20 rounded-full text-xs font-bold hover:bg-white hover:text-slate-950 transition"
-              >info@kacy.rw</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div id="footer-placeholder"></div>
+    </footer>
   </body>
 </html>

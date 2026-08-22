@@ -1,40 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://kacy.rw/</loc>
-    <lastmod>2026-06-12</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://kacy.rw/assets/images/kokolikooo.jpeg</image:loc>
-      <image:title>KOKOLIKOOO - Rwanda's Premier Poultry Brand</image:title>
+      <image:loc>https://kacy.rw/assets/images/og-image.jpg</image:loc>
+      <image:title>KOKOLIKOOO — Rwanda's Premier Poultry Brand</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://kacy.rw/assets/images/meat_cuts.jpg</image:loc>
+      <image:loc>https://kacy.rw/assets/images/chicken-cuts.webp</image:loc>
       <image:title>KOKOLIKOOO Chicken Specialized Cuts</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kacy.rw/assets/images/whole-broilers.webp</image:loc>
+      <image:title>Whole Broiler Chicken from KOKOLIKOOO</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kacy.rw/assets/images/kacy-farms-hero.webp</image:loc>
+      <image:title>Kacy Farms delivery across Kigali</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://kacy.rw/about/</loc>
-    <lastmod>2026-06-12</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://kacy.rw/assets/images/chicken.avif</image:loc>
-      <image:title>Kacy Farms Industrial Poultry</image:title>
+      <image:title>Kacy Farms industrial poultry production</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kacy.rw/assets/images/kacy-motel.webp</image:loc>
+      <image:title>Kacy Motel hospitality</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kacy.rw/assets/images/real-estate.webp</image:loc>
+      <image:title>Kacy commercial real estate</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kacy.rw/assets/images/delivery-truck-2.webp</image:loc>
+      <image:title>Kacy Farms refrigerated delivery truck</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://kacy.rw/contact/</loc>
-    <lastmod>2026-06-12</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://kacy.rw/assets/images/og-image.jpg</image:loc>
+      <image:title>KOKOLIKOOO — Contact page</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://kacy.rw/privacy-policy/</loc>
-    <lastmod>2026-06-12</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kacy.rw/blog/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://kacy.rw/assets/images/whole-broilers.webp</image:loc>
+      <image:title>Whole broiler chicken from KOKOLIKOOO</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kacy.rw/assets/images/chicken-cuts.webp</image:loc>
+      <image:title>Vacuum-packed chicken cuts from KOKOLIKOOO</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kacy.rw/assets/images/delivery-truck-1.webp</image:loc>
+      <image:title>Refrigerated Kacy Farms delivery truck</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kacy.rw/blog/choose-chicken-supplier-kigali/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://kacy.rw/assets/images/whole-broilers.webp</image:loc>
+      <image:title>How to Choose a Reliable Chicken Supplier in Kigali</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kacy.rw/blog/whole-chicken-vs-cuts/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://kacy.rw/assets/images/chicken-cuts.webp</image:loc>
+      <image:title>Whole Chicken vs. Precut Portions</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kacy.rw/blog/cold-chain-fresh-chicken/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://kacy.rw/assets/images/delivery-truck-1.webp</image:loc>
+      <image:title>Why the Cold Chain Matters for Fresh Chicken</image:title>
+    </image:image>
   </url>
 </urlset>
